@@ -1,12 +1,13 @@
 #include <pybind11/pybind11.h>
-#include "Utility.h"
+#include <pybind11/stl.h> // For automatic conversion of STL types
+
+// Include the C++ libcurl functions
+#include "bindings/ApiBindings.cpp"
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(reqboost, m)
-{
-    m.doc() = "Reqboost: A C++ implementation of the requests library";
+PYBIND11_MODULE(reqboost, m) {
+     m.doc() = "Python package for HTTP requests based on C++ libcurl";
 
-    // Bindings for the Utility functions
-    m.def("url_encode", &Utility::urlEncode);
+     bind_api(m);
 }
