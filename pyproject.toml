@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "reqboost"
+version = "0.0.0"
+description = ""
+authors = ["Khushiyant <khushiyant2002@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^8.3.2"
+sphinx = "^8.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.8.0"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "pybind11>=2.10.0",
+]
+build-backend = "setuptools.build_meta"
+
+
+[tool.cibuildwheel]
+test-command = "pytest {project}/tests/"
+test-skip = "*universal2:arm64"
+
+
+[tool.ruff]
+target-version = "py37"
+
+[tool.ruff.lint]
+extend-select = [
+  "B",   # flake8-bugbear
+  "I",   # isort
+  "PGH", # pygrep-hooks
+  "RUF", # Ruff-specific
+  "UP",  # pyupgrade
+]
