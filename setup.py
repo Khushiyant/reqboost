@@ -5,7 +5,7 @@ import os
 import subprocess
 import sys
 
-__version__ = "0.0"
+__version__ = "0.0.0"
 
 def get_pkg_config_paths(package):
     """Get the include and library paths using pkg-config."""

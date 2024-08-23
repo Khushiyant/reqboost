@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <iostream>
 
 namespace Reqboost {
     // Forward declaration of the httpStatusCodes map
