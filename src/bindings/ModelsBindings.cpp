@@ -23,4 +23,12 @@ void bind_models(py::module_ &m)
              {
                  return "<Response [" + std::to_string(r.status_code) + "]>";
              });
+
+    py::class_<Reqboost::Models::ParsedURL>(m, "ParsedURL")
+        .def(py::init<>())
+        .def_readwrite("scheme", &Reqboost::Models::ParsedURL::scheme)
+        .def_readwrite("host", &Reqboost::Models::ParsedURL::host)
+        .def_readwrite("path", &Reqboost::Models::ParsedURL::path)
+        .def_readwrite("query", &Reqboost::Models::ParsedURL::query)
+        .def_readwrite("fragment", &Reqboost::Models::ParsedURL::fragment);
 }
