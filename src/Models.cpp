@@ -66,7 +66,7 @@ namespace Reqboost
                     }
                 }
 
-                return Compat::urlencode(result, true); // Assume urlencode is implemented
+                return Utility::urlencode(result, true); // Assume urlencode is implemented
             }
             else
             {
