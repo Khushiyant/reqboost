@@ -12,8 +12,10 @@ namespace Reqboost
 {
     namespace Api
     {
-        Models::Response request(const std::string &method, const std::string &url)
+
+        Models::Response request(const std::string &method, const std::string &url, Models::RequestOptions options = {})
         {
+
             Models::Response response;
             CURL *curl = curl_easy_init();
             if (curl)
@@ -28,9 +30,45 @@ namespace Reqboost
             return response;
         }
 
-        Models::Response get(const std::string &url)
+        Models::Response get(const std::string &url, const std::map<std::string, std::string> &params = {}, Models::RequestOptions kwargs = {})
         {
-            return request("GET", url);
+            kwargs.params = params;
+            return request("GET", url, kwargs);
         }
+
+        Models::Response post(const std::string &url, const std::map<std::string, std::string> &data = {}, Models::RequestOptions kwargs = {})
+        {
+            kwargs.data = data;
+            return request("POST", url, kwargs);
+        }
+
+        Models::Response put(const std::string &url, const std::map<std::string, std::string> &data = {}, Models::RequestOptions kwargs = {})
+        {
+            kwargs.data = data;
+            return request("PUT", url, kwargs);
+        }
+
+        Models::Response remove(const std::string &url, Models::RequestOptions kwargs = {})
+        {
+            return request("DELETE", url, kwargs);
+        }
+
+        Models::Response head(const std::string &url, Models::RequestOptions kwargs = {})
+        {
+            return request("HEAD", url, kwargs);
+        }
+
+        Models::Response patch(const std::string &url, const std::map<std::string, std::string> &data = {}, Models::RequestOptions kwargs = {})
+        {
+            kwargs.data = data;
+            return request("PATCH", url, kwargs);
+        }
+
+        Models::Response options(const std::string &url, Models::RequestOptions kwargs = {})
+        {
+            return request("OPTIONS", url, kwargs);
+        }
+
+
     }
 }
