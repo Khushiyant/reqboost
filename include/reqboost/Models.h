@@ -8,30 +8,32 @@
 #include <vector>
 #include <utility>
 
-#include "Utility.h"
-
 namespace Reqboost
 {
     namespace Models
     {
-        class RequestEncodingMixin
+        struct ParsedURL
         {
-        public:
-            std::string url;
-
-            // Constructor to set the URL
-            RequestEncodingMixin(const std::string &u);
-
-            // Method to build the path URL
-            std::string path_url() const;
-
-            // Static method to encode parameters in a piece of data
-            static std::string _encode_params(const std::any &data);
-
-            // Static method to build the body for a multipart/form-data request
-            static std::pair<std::string, std::string> _encode_files(const std::any &files, const std::any &data);
+            std::string scheme;
+            std::string host;
+            std::string path;
+            std::string query;
+            std::string fragment;
         };
 
+        // Options
+
+        struct RequestOptions {
+            std::map<std::string, std::string> params = {};
+            std::map<std::string, std::string> data = {};
+        
+            RequestOptions() = default;
+
+            RequestOptions(const std::map<std::string, std::string> &params, const std::map<std::string, std::string> &data) : params(params), data(data) {}
+        };
+
+
+        // API Models
         class Response
         {
         public:
