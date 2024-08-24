@@ -5,6 +5,7 @@
 #include "bindings/ApiBindings.cpp"
 #include "bindings/ModelsBindings.cpp"
 #include "bindings/UtilityBindings.cpp"
+#include "bindings/ExceptionBindings.cpp"
 
 
 namespace py = pybind11;
@@ -15,4 +16,6 @@ PYBIND11_MODULE(reqboost, m) {
      bind_models(m);
      bind_api(m);
      bind_utility(m);
+     bind_exceptions(m);
+
 }
