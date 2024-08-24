@@ -75,7 +75,7 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 
 ## Troubleshooting Builds
 
-In case, modified code builds are not reflected in find build due to caching of previous builds. Use the following commands:
+In case, modified code builds are not reflected in final build due to caching of previous builds. Use the following commands:
 
 ```bash
 python setup.py clean --all
