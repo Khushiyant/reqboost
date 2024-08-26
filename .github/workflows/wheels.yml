@@ -44,11 +44,11 @@ jobs:
 
     - name: Clean build artifacts
       run: |
-        python setup.py clean --all
+        poetry run python setup.py clean --all
 
     - name: Build the package with setup.py
       run: |
-        python setup.py sdist bdist_wheel
+        poetry run python setup.py sdist bdist_wheel
 
     - name: Run tests
       run: |
