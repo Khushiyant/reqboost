@@ -49,6 +49,7 @@ jobs:
     - name: Build the package with setup.py
       run: |
         poetry run python setup.py sdist bdist_wheel
+        pip install dist/*.whl
 
     - name: Run tests
       run: |
