@@ -44,7 +44,7 @@ jobs:
 
     - name: Extract Version from Tag
       id: extract_version
-      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+      run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
     - name: Clean build artifacts
       run: |
