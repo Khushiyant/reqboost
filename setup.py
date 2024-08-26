@@ -5,7 +5,11 @@ import os
 import subprocess
 import sys
 
-__version__ = "0.0.0"
+__version__ = os.getenv('VERSION', '0.0.0')
+
+def read_readme():
+    with open('README.md', encoding='utf-8') as f:
+        return f.read()
 
 def get_pkg_config_paths(package):
     """Get the include and library paths using pkg-config."""
@@ -67,7 +71,8 @@ setup(
     author_email="khushiyant2002@gmail.com",
     url="https://github.com/Khushiyant/reqboost",
     description="Python package for HTTP requests based on C++ libcurl and Poco",
-    long_description="",
+    long_description=read_readme(),
+    long_description_content_type="text/markdown",
     license="Apache-2.0",
     classifiers=[
         "Programming Language :: Python :: 3",
