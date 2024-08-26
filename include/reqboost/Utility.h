@@ -26,14 +26,6 @@ namespace Reqboost {
             ERROR
         };
 
-        // Log levels enumeration
-        enum LogLevel
-        {
-            INFO,
-            WARNING,
-            ERROR
-        };
-
         // LogMessage class declaration
         class LogMessage
         {

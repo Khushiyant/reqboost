@@ -1,0 +1,65 @@
+name: Publish Python Package
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+    tags:
+      - '*.*.*'  # Trigger on version tags
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Poetry
+      run: |
+        pip install poetry
+
+    - name: Install dependencies with Poetry
+      run: |
+        poetry install
+
+    - name: Install external dependencies (Ubuntu)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libcurl4-openssl-dev libpoco-dev pkg-config
+
+    - name: Install external dependencies (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        brew install poco curl pkg-config
+
+    - name: Run tests
+      run: |
+        poetry run pytest  # Replace with your testing command
+
+    - name: Clean build artifacts
+      run: |
+        python setup.py clean --all
+
+    - name: Build the package with setup.py
+      run: |
+        python setup.py sdist bdist_wheel
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+
+    - name: Verify package installation
+      run: |
+        pip install reqboost
+        python -c "import reqboost; print(reqboost)"
