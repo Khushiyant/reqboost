@@ -13,6 +13,10 @@ namespace py = pybind11;
 PYBIND11_MODULE(reqboost, m) {
      m.doc() = "Python package for HTTP requests based on C++ libcurl";
 
+     #ifdef VERSION_INFO
+     m.attr("__version__") = VERSION_INFO;
+#endif
+
      bind_models(m);
      bind_api(m);
      bind_utility(m);

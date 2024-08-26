@@ -66,7 +66,7 @@ ext_modules = [
         include_dirs=curl_include_dirs + poco_include_dirs,
         libraries=["curl"] + ["PocoFoundation", "PocoNet"],  # Adjust library names as needed
         library_dirs=curl_library_dirs + poco_library_dirs,
-        define_macros=[("VERSION_INFO", get_git_version())],
+        define_macros=[("VERSION_INFO", f"\"{get_git_version()}\"")],
         extra_compile_args=["-std=c++14"],  # Adjust as necessary
     ),
 ]

@@ -42,14 +42,6 @@ jobs:
       run: |
         brew install poco curl pkg-config
 
-    - name: Extract Version from Tag
-      id: extract_version
-      run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-
-    - name: Clean build artifacts
-      run: |
-        poetry run python setup.py clean --all
-
     - name: Build the package with setup.py
       run: |
         poetry run python setup.py sdist bdist_wheel
@@ -57,11 +49,11 @@ jobs:
 
     - name: Run tests
       run: |
-        poetry run pytest  # Replace with your testing command
+        poetry run pytest
 
     - name: Publish to PyPI
       run: |
-        poetry run twine upload dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
+        poetry run twine upload --skip-existing dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
 
 
     - name: Verify package installation
