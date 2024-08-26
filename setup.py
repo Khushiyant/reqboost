@@ -5,11 +5,18 @@ import os
 import subprocess
 import sys
 
-__version__ = os.getenv('VERSION', '0.0.0')
-
 def read_readme():
     with open('README.md', encoding='utf-8') as f:
         return f.read()
+    
+def get_git_version():
+    try:
+        version = subprocess.check_output(
+            ["git", "describe", "--tags", "--abbrev=0"]
+        ).decode().strip()
+        return version
+    except subprocess.CalledProcessError:
+        return "0.0.0"
 
 def get_pkg_config_paths(package):
     """Get the include and library paths using pkg-config."""
@@ -59,14 +66,14 @@ ext_modules = [
         include_dirs=curl_include_dirs + poco_include_dirs,
         libraries=["curl"] + ["PocoFoundation", "PocoNet"],  # Adjust library names as needed
         library_dirs=curl_library_dirs + poco_library_dirs,
-        define_macros=[("VERSION_INFO", __version__)],
+        define_macros=[("VERSION_INFO", get_git_version())],
         extra_compile_args=["-std=c++14"],  # Adjust as necessary
     ),
 ]
 
 setup(
     name="reqboost",
-    version=__version__,
+    version=get_git_version(),
     author="Khushiyant",
     author_email="khushiyant2002@gmail.com",
     url="https://github.com/Khushiyant/reqboost",
