@@ -414,6 +414,20 @@ pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
 
 [[package]]
+name = "pybind11"
+version = "2.13.5"
+description = "Seamless operability between C++11 and Python"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pybind11-2.13.5-py3-none-any.whl", hash = "sha256:dc35a98b61a0d23ee8599b317664f5be7e259fdc369a3b810b1ebbc3f5674d27"},
+    {file = "pybind11-2.13.5.tar.gz", hash = "sha256:ae33f635322f9d9741abde0c5f348bf9373f6c22298883395e586cb43c55574e"},
+]
+
+[package.extras]
+global = ["pybind11-global (==2.13.5)"]
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -723,4 +737,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "f3c6f9eaeae340408dc60a6a300713839181b72afe4f5d69c2625402457c8fd7"
+content-hash = "969800273b562e2df9492accb270e4df725f7ab2fe1ce9908b94579033f22fe9"
