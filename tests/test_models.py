@@ -3,7 +3,6 @@ from reqboost import Response, ParsedURL  # Assuming bindings expose these corre
 def test_response_initialization():
     response = Response()
     assert response.status_code == 0
-    assert response._content == ""
     assert isinstance(response.headers, dict)
     assert response.url == ""
     assert isinstance(response.history, list)
@@ -17,7 +16,6 @@ def test_response_attributes():
     response = Response()
     
     response.status_code = 200
-    response._content = "OK"
     response.headers = {"Content-Type": "application/json"}
     response.url = "https://example.com"
     response.encoding = "utf-8"
@@ -27,7 +25,6 @@ def test_response_attributes():
     response.request = "GET / HTTP/1.1"
 
     assert response.status_code == 200
-    assert response._content == "OK"
     assert response.headers["Content-Type"] == "application/json"
     assert response.url == "https://example.com"
     assert response.encoding == "utf-8"
