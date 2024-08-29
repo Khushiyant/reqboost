@@ -1,5 +1,6 @@
 #include <pybind11/pybind11.h>
 #include "Utility.h"
+#include "bindings/UtilityBindings.h"
 
 namespace py = pybind11;
 

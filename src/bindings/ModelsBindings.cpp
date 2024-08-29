@@ -1,6 +1,7 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include "Models.h" // Include the header where Response is defined
+#include "Models.h" // Include the header where Response, ParsedURL, and RequestOptions are defined
+#include "bindings/ModelsBindings.h"
 
 namespace py = pybind11;
 
@@ -31,4 +32,9 @@ void bind_models(py::module_ &m)
         .def_readwrite("path", &Reqboost::Models::ParsedURL::path)
         .def_readwrite("query", &Reqboost::Models::ParsedURL::query)
         .def_readwrite("fragment", &Reqboost::Models::ParsedURL::fragment);
+
+    py::class_<Reqboost::Models::RequestOptions>(m, "RequestOptions")
+        .def(py::init<>()) // Bind the default constructor
+        .def_readwrite("params", &Reqboost::Models::RequestOptions::params)
+        .def_readwrite("data", &Reqboost::Models::RequestOptions::data);
 }

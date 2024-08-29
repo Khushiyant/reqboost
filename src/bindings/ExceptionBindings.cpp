@@ -1,5 +1,6 @@
 #include <pybind11/pybind11.h>
 #include "Exceptions.h"
+#include "bindings/ExceptionBindings.h"
 
 namespace py = pybind11;
 
