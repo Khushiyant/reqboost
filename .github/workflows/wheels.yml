@@ -36,6 +36,7 @@ jobs:
 
     - name: Build the package with setup.py
       run: |
+        pip install wheel twine pybind11 cmake
         python setup.py clean --all                             
         python setup.py sdist bdist_wheel
         pip install dist/*.whl
