@@ -53,21 +53,22 @@ setx POCO_LIB_DIR "C:\path\to\poco\lib"
 
 # Installation
 
-Clone the repo:
+* Clone the repo and install:
 
 ```bash
-
 git clone https://github.com/Khushiyant/reqboost.git
 cd reqboost
-```
-
-Poetry install the dependencies:
-
-```bash
-poetry shell
-poetry install 
 pip install .
 ```
+
+>  Above example will install in root, so try to use virtual environment for installation
+
+* Use direct github installation
+
+```bash
+pip install git+https://github.com/Khushiyant/reqboost.git 
+```
+
 
 # Contribution
 

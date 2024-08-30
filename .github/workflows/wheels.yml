@@ -1,11 +1,10 @@
 name: Publish Python Package
 
 on:
-  push:
+  workflow_dispatch:
+  pull_request:
     branches:
-      - main  # Trigger on push to the main branch
-    tags:
-      - '*.*.*'  # Trigger on version tags
+      - main
 
 jobs:
   build:
