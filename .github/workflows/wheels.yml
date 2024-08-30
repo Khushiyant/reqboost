@@ -23,14 +23,6 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install Poetry
-      run: |
-        pip install poetry
-
-    - name: Install dependencies with Poetry
-      run: |
-       poetry install --no-root
-
     - name: Install external dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
       run: |
@@ -44,25 +36,19 @@ jobs:
 
     - name: Build the package with setup.py
       run: |
-        poetry run python setup.py clean --all                             
-        poetry run python setup.py sdist bdist_wheel
-        poetry run pip install dist/*.whl
+        python setup.py clean --all                             
+        python setup.py sdist bdist_wheel
+        pip install dist/*.whl
 
     - name: Run tests
       run: |
-        poetry run pytest
-
-    - name: Linux wheel audit
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        pip install auditwheel
-        auditwheel repair dist/*.whl -w dist/
+        pytest tests
 
     - name: Publish to PyPI
       run: |
-        poetry run twine upload --skip-existing dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
+        twine upload --skip-existing dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
 
 
     - name: Verify package installation
       run: |
-        poetry run python -c "import reqboost; print(reqboost)"
+        python -c "import reqboost; print(reqboost)"

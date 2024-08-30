@@ -11,21 +11,21 @@ void bind_api(py::module_ &m)
           &Reqboost::Api::get,
           "Perform an HTTP GET request and return the response",
           py::arg("url"),
-          py::arg("params") = std::map<std::string, std::string>(),
+          py::arg("params") = py::dict(),
           py::arg("kwargs") = Reqboost::Models::RequestOptions());
 
     m.def("post",
           &Reqboost::Api::post,
           "Perform an HTTP POST request and return the response",
           py::arg("url"),
-          py::arg("data") = std::map<std::string, std::string>(),
+          py::arg("data") = py::dict(),
           py::arg("kwargs") = Reqboost::Models::RequestOptions());
 
     m.def("put",
           &Reqboost::Api::put,
           "Perform an HTTP PUT request and return the response",
           py::arg("url"),
-          py::arg("data") = std::map<std::string, std::string>(),
+          py::arg("data") = py::dict(),
           py::arg("kwargs") = Reqboost::Models::RequestOptions());
 
     m.def("remove",
@@ -44,7 +44,7 @@ void bind_api(py::module_ &m)
           &Reqboost::Api::patch,
           "Perform an HTTP PATCH request and return the response",
           py::arg("url"),
-          py::arg("data") = std::map<std::string, std::string>(),
+          py::arg("data") = py::dict(),
           py::arg("kwargs") = Reqboost::Models::RequestOptions());
 
     m.def("options",

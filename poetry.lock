@@ -12,6 +12,26 @@ files = [
 ]
 
 [[package]]
+name = "auditwheel"
+version = "6.1.0"
+description = "Cross-distribution Linux wheels"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "auditwheel-6.1.0-py3-none-any.whl", hash = "sha256:e52f734861859e3743eb29fcac7da9c4921a1e4bea58f954b52f2926f8e9e364"},
+    {file = "auditwheel-6.1.0.tar.gz", hash = "sha256:3bdc686e774cf9e355e924b0fe5a562d55caa385d72234ffe7b81b378dba360f"},
+]
+
+[package.dependencies]
+packaging = ">=20.9"
+pyelftools = ">=0.24"
+
+[package.extras]
+coverage = ["docker", "jsonschema", "pretend", "pypatchelf", "pytest (>=3.4)", "pytest-cov"]
+develop = ["docker", "jsonschema", "pretend", "pypatchelf", "pytest (>=3.4)", "pytest-cov"]
+test = ["docker", "jsonschema", "pretend", "pypatchelf", "pytest (>=3.4)"]
+
+[[package]]
 name = "babel"
 version = "2.16.0"
 description = "Internationalization utilities"
@@ -780,6 +800,17 @@ files = [
 ]
 
 [[package]]
+name = "pyelftools"
+version = "0.31"
+description = "Library for analyzing ELF files and DWARF debugging information"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyelftools-0.31-py3-none-any.whl", hash = "sha256:f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"},
+    {file = "pyelftools-0.31.tar.gz", hash = "sha256:c774416b10310156879443b81187d182d8d9ee499660380e645918b50bc88f99"},
+]
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -988,6 +1019,26 @@ files = [
 [package.dependencies]
 cryptography = ">=2.0"
 jeepney = ">=0.6"
+
+[[package]]
+name = "setuptools"
+version = "74.0.0"
+description = "Easily download, build, install, upgrade, and uninstall Python packages"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "setuptools-74.0.0-py3-none-any.whl", hash = "sha256:0274581a0037b638b9fc1c6883cc71c0210865aaa76073f7882376b641b84e8f"},
+    {file = "setuptools-74.0.0.tar.gz", hash = "sha256:a85e96b8be2b906f3e3e789adec6a9323abf79758ecfa3065bd740d81158b11e"},
+]
+
+[package.extras]
+check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1)", "ruff (>=0.5.2)"]
+core = ["importlib-metadata (>=6)", "importlib-resources (>=5.10.2)", "jaraco.text (>=3.7)", "more-itertools (>=8.8)", "packaging (>=24)", "platformdirs (>=2.6.2)", "tomli (>=2.0.1)", "wheel (>=0.43.0)"]
+cover = ["pytest-cov"]
+doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "pyproject-hooks (!=1.1)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (>=1,<2)", "sphinx-reredirects", "sphinxcontrib-towncrier", "towncrier (<24.7)"]
+enabler = ["pytest-enabler (>=2.2)"]
+test = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "ini2toml[lite] (>=0.14)", "jaraco.develop (>=7.21)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "jaraco.test", "packaging (>=23.2)", "pip (>=19.1)", "pyproject-hooks (!=1.1)", "pytest (>=6,!=8.1.*)", "pytest-home (>=0.5)", "pytest-perf", "pytest-subprocess", "pytest-timeout", "pytest-xdist (>=3)", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel (>=0.44.0)"]
+type = ["importlib-metadata (>=7.0.2)", "jaraco.develop (>=7.21)", "mypy (==1.11.*)", "pytest-mypy"]
 
 [[package]]
 name = "snowballstemmer"
@@ -1217,4 +1268,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b3ed60ecc0a1d0fe3326dfe91cca81d11158822aa84d72d2e5c7d228692605f7"
+content-hash = "bb298fbab1a5524fd4c65185ff077fef11582c6c67d6f2d43fc8cddcfeb853e3"

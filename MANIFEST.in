@@ -1,0 +1,4 @@
+include README.md LICENSE
+graft src
+graft include
+global-include CMakeLists.txt *.cmake

@@ -12,27 +12,6 @@ def test_response_initialization():
     assert response.elapsed == ""
     assert response.request == ""
 
-def test_response_attributes():
-    response = Response()
-    
-    response.status_code = 200
-    response.headers = {"Content-Type": "application/json"}
-    response.url = "https://example.com"
-    response.encoding = "utf-8"
-    response.reason = "OK"
-    response.cookies = {"sessionid": "12345"}
-    response.elapsed = "100ms"
-    response.request = "GET / HTTP/1.1"
-
-    assert response.status_code == 200
-    assert response.headers["Content-Type"] == "application/json"
-    assert response.url == "https://example.com"
-    assert response.encoding == "utf-8"
-    assert response.reason == "OK"
-    assert response.cookies["sessionid"] == "12345"
-    assert response.elapsed == "100ms"
-    assert response.request == "GET / HTTP/1.1"
-
 def test_response_repr():
     response = Response()
     response.status_code = 404

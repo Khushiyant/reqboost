@@ -23,15 +23,15 @@ namespace Reqboost
 
         // Options
 
-        struct RequestOptions {
+        struct RequestOptions
+        {
             std::map<std::string, std::string> params = {};
             std::map<std::string, std::string> data = {};
-        
+
             RequestOptions() = default;
 
             RequestOptions(const std::map<std::string, std::string> &params, const std::map<std::string, std::string> &data) : params(params), data(data) {}
         };
-
 
         // API Models
         class Response

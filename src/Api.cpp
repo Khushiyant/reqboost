@@ -69,6 +69,5 @@ namespace Reqboost
             return request("OPTIONS", url, kwargs);
         }
 
-
     }
 }
