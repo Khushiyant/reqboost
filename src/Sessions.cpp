@@ -9,6 +9,20 @@ namespace Reqboost
             curl = curl_easy_init();
         }
 
+        Session * Session::__enter__()
+        {
+            return this; 
+        }
+        void Session::__exit__(const py::object &exc_type, const py::object &exc_value, const py::object &traceback)
+        {
+            // Cleanup and close the session
+            if (curl)
+            {
+                curl_easy_cleanup(curl);
+                curl = nullptr;
+            }
+        }
+
         Models::Response Session::request(const std::string &method, const std::string &url, const py::kwargs kwargs)
         {
             Models::Response response;
