@@ -1,6 +1,3 @@
-#include <pybind11/pybind11.h>
-#include <pybind11/stl.h>
-#include "Models.h" // Include the header where Response, ParsedURL, and RequestOptions are defined
 #include "bindings/ModelsBindings.h"
 
 namespace py = pybind11;

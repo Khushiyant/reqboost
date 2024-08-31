@@ -1,8 +1,3 @@
-#include <pybind11/pybind11.h>
-#include <pybind11/stl.h> // For automatic conversion of STL types
-
-
-#include "Exceptions.h"
 #include "bindings/ExceptionBindings.h"
 
 namespace py = pybind11;
