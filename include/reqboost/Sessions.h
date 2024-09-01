@@ -21,7 +21,7 @@ namespace Reqboost
 
         public:
             Session();
-            ~Session() = default;
+            ~Session();
 
             Models::Response request(const std::string &method, const std::string &url, const py::kwargs kwargs);
             Models::Response get(const std::string &url, const py::dict params = py::none(), py::kwargs kwargs = {});

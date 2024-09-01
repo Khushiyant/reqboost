@@ -9,6 +9,14 @@ namespace Reqboost
             curl = curl_easy_init();
         }
 
+        Session::~Session()
+        {
+            if (curl)
+            {
+                curl_easy_cleanup(curl);
+            }
+        }
+
         Session * Session::__enter__()
         {
             return this; 
@@ -18,7 +26,6 @@ namespace Reqboost
             // Cleanup and close the session
             if (curl)
             {
-                curl_easy_cleanup(curl);
                 curl = nullptr;
             }
         }
