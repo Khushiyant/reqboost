@@ -8,6 +8,8 @@
 #include <vector>
 #include <utility>
 
+#include "Exceptions.h"
+
 namespace Reqboost
 {
     namespace Models
@@ -36,21 +38,27 @@ namespace Reqboost
         // API Models
         class Response
         {
-        public:
-            std::string _content;
-            int status_code;
-            std::map<std::string, std::string> headers;
-            std::string url;
-            std::vector<Response> history;
-            std::string encoding;
-            std::string reason;
-            std::map<std::string, std::string> cookies;
+            public:
+                std::string _content;
+                int status_code;
+                std::map<std::string, std::string> headers;
+                std::string url;
+                std::vector<Response> history;
+                std::string encoding;
+                std::string reason;
+                std::map<std::string, std::string> cookies;
 
-            std::string elapsed;
-            std::string request;
+                std::string elapsed;
+                std::string request;
 
-            // Constructor
-            Response();
+                // Dunder methods
+                std::string __repr__();
+
+                // property methods
+                bool ok() const;
+
+                // Constructor
+                Response();
         };
     } // namespace Models
 } // namespace Reqboost

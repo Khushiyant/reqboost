@@ -16,11 +16,12 @@ void bind_models(py::module_ &m)
         .def_readwrite("cookies", &Reqboost::Models::Response::cookies)
         .def_readwrite("elapsed", &Reqboost::Models::Response::elapsed)
         .def_readwrite("request", &Reqboost::Models::Response::request)
-        .def("__repr__",
-             [](const Reqboost::Models::Response &r)
-             {
-                 return "<Response [" + std::to_string(r.status_code) + "]>";
-             });
+
+        // Dunder methods
+        .def("__repr__", &Reqboost::Models::Response::__repr__)
+
+        // property methods
+        .def("ok", &Reqboost::Models::Response::ok);
 
     py::class_<Reqboost::Models::ParsedURL>(m, "ParsedURL")
         .def(py::init<>())
