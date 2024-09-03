@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install Doxygen
-      run: sudo apt-get install doxygen
+      run: sudo apt-get install doxygen graphviz
     - name: Install Doxygen
       run: doxygen
     - name: Run Doxygen
@@ -21,7 +21,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: docs/html
+        name: doxhtml
         path: docs/html
 
   deploy:
@@ -31,7 +31,7 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v3
       with:
-        name: docs/html
+        name: doxhtml
         path: docs/html
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
