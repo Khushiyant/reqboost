@@ -3,6 +3,14 @@
 namespace Reqboost {
     namespace Utility {
 
+        std::string decode_utf8(const std::string &encoded)
+        {
+            std::string result;
+            const auto decoded_value = curl_easy_unescape(nullptr, encoded.c_str(), static_cast<int>(encoded.length()), nullptr);
+            result = decoded_value;
+            curl_free(decoded_value);
+            return result;
+        }
         std::string urlunparse(const Models::ParsedURL &parsed)
         {
             Poco::URI uri;

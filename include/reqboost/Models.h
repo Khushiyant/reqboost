@@ -10,6 +10,7 @@
 
 #include "Exceptions.h"
 
+
 namespace Reqboost
 {
     namespace Models
@@ -51,11 +52,14 @@ namespace Reqboost
                 std::string elapsed;
                 std::string request;
 
+                // Methods
+                Exceptions::RequestException raise_for_status();
+
                 // Dunder methods
                 std::string __repr__();
 
                 // property methods
-                bool ok() const;
+                bool ok() ;
 
                 // Constructor
                 Response();
