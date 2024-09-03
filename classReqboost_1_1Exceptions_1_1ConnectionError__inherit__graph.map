@@ -1,0 +1,8 @@
+<map id="Reqboost::Exceptions::ConnectionError" name="Reqboost::Exceptions::ConnectionError">
+<area shape="rect" id="node1" title=" " alt="" coords="403,71,565,112"/>
+<area shape="rect" id="node4" href="$classReqboost_1_1Exceptions_1_1ConnectTimeout.html" title=" " alt="" coords="613,5,776,47"/>
+<area shape="rect" id="node5" href="$classReqboost_1_1Exceptions_1_1ProxyError.html" title=" " alt="" coords="613,71,776,112"/>
+<area shape="rect" id="node6" href="$classReqboost_1_1Exceptions_1_1SSLError.html" title=" " alt="" coords="613,136,776,177"/>
+<area shape="rect" id="node2" href="$classReqboost_1_1Exceptions_1_1RequestException.html" title=" " alt="" coords="192,71,355,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,78,144,105"/>
+</map>

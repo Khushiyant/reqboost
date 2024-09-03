@@ -1,0 +1,27 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="192,111,356,138"/>
+<area shape="rect" id="node2" href="$classReqboost_1_1Exceptions_1_1InvalidHeader.html" title=" " alt="" coords="415,201,577,243"/>
+<area shape="rect" id="node3" href="$classReqboost_1_1Exceptions_1_1InvalidSchema.html" title=" " alt="" coords="415,5,577,47"/>
+<area shape="rect" id="node4" href="$classReqboost_1_1Exceptions_1_1InvalidURL.html" title=" " alt="" coords="415,71,577,112"/>
+<area shape="rect" id="node6" href="$classReqboost_1_1Exceptions_1_1MissingSchema.html" title=" " alt="" coords="415,136,577,177"/>
+<area shape="rect" id="node5" href="$classReqboost_1_1Exceptions_1_1InvalidProxyURL.html" title=" " alt="" coords="636,71,799,112"/>
+<area shape="rect" id="node7" title=" " alt="" coords="215,274,333,301"/>
+<area shape="rect" id="node8" href="$classReqboost_1_1Exceptions_1_1StreamConsumedError.html" title=" " alt="" coords="407,267,585,308"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,470,144,497"/>
+<area shape="rect" id="node10" href="$classReqboost_1_1Exceptions_1_1RequestException.html" title=" " alt="" coords="193,463,355,504"/>
+<area shape="rect" id="node11" href="$classReqboost_1_1Exceptions_1_1ChunkedEncodingError.html" title=" " alt="" coords="408,659,584,700"/>
+<area shape="rect" id="node12" href="$classReqboost_1_1Exceptions_1_1ConnectionError.html" title=" " alt="" coords="415,789,577,831"/>
+<area shape="rect" id="node16" href="$classReqboost_1_1Exceptions_1_1ContentDecodingError.html" title=" " alt="" coords="409,855,583,896"/>
+<area shape="rect" id="node17" href="$classReqboost_1_1Exceptions_1_1HTTPError.html" title=" " alt="" coords="415,920,577,961"/>
+<area shape="rect" id="node18" href="$classReqboost_1_1Exceptions_1_1InvalidJSONError.html" title=" " alt="" coords="415,332,577,373"/>
+<area shape="rect" id="node20" href="$classReqboost_1_1Exceptions_1_1RetryError.html" title=" " alt="" coords="415,397,577,439"/>
+<area shape="rect" id="node21" href="$classReqboost_1_1Exceptions_1_1Timeout.html" title=" " alt="" coords="415,724,577,765"/>
+<area shape="rect" id="node23" href="$classReqboost_1_1Exceptions_1_1TooManyRedirects.html" title=" " alt="" coords="415,463,577,504"/>
+<area shape="rect" id="node24" href="$classReqboost_1_1Exceptions_1_1URLRequired.html" title=" " alt="" coords="415,528,577,569"/>
+<area shape="rect" id="node25" href="$classReqboost_1_1Exceptions_1_1UnrewindableBodyError.html" title=" " alt="" coords="404,593,588,635"/>
+<area shape="rect" id="node13" href="$classReqboost_1_1Exceptions_1_1ConnectTimeout.html" title=" " alt="" coords="636,724,799,765"/>
+<area shape="rect" id="node14" href="$classReqboost_1_1Exceptions_1_1ProxyError.html" title=" " alt="" coords="636,789,799,831"/>
+<area shape="rect" id="node15" href="$classReqboost_1_1Exceptions_1_1SSLError.html" title=" " alt="" coords="636,855,799,896"/>
+<area shape="rect" id="node19" href="$classReqboost_1_1Exceptions_1_1JSONDecodeError.html" title=" " alt="" coords="636,332,799,373"/>
+<area shape="rect" id="node22" href="$classReqboost_1_1Exceptions_1_1ReadTimeout.html" title=" " alt="" coords="636,659,799,700"/>
+</map>
