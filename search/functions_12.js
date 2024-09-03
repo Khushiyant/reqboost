@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['what_290',['what',['../classReqboost_1_1Exceptions_1_1RequestException.html#a65c762b7ccbff53a5784148cdf2e2fe6',1,'Reqboost::Exceptions::RequestException::what()'],['../classReqboost_1_1Exceptions_1_1MissingSchema.html#a8734922b47f740d31c28c3d576eadb85',1,'Reqboost::Exceptions::MissingSchema::what()'],['../classReqboost_1_1Exceptions_1_1InvalidSchema.html#a0c769c211019041c867873dbb339f3cc',1,'Reqboost::Exceptions::InvalidSchema::what()'],['../classReqboost_1_1Exceptions_1_1InvalidURL.html#a14724103b6dbc59bf63afda05d13301a',1,'Reqboost::Exceptions::InvalidURL::what()'],['../classReqboost_1_1Exceptions_1_1InvalidHeader.html#a3aff49d9ce7e96fec7858184aece820c',1,'Reqboost::Exceptions::InvalidHeader::what()'],['../classReqboost_1_1Exceptions_1_1InvalidProxyURL.html#a23eb926af3a7e0a5ef38a5949ed03f0c',1,'Reqboost::Exceptions::InvalidProxyURL::what()'],['../classReqboost_1_1Exceptions_1_1StreamConsumedError.html#ae287d48bf581d5ecde47a8ce7a504266',1,'Reqboost::Exceptions::StreamConsumedError::what()'],['../classReqboost_1_1Exceptions_1_1RequestsWarning.html#a9a059ac938a2cae4feeec76ab399dbcd',1,'Reqboost::Exceptions::RequestsWarning::what()']]],
-  ['writecallback_291',['WriteCallback',['../namespaceReqboost_1_1Sessions.html#ae99d0f6dc8aea6b99c5fbe6b8855ecea',1,'Reqboost::Sessions']]]
+  ['unicodeisascii_287',['UnicodeIsAscii',['../namespaceReqboost_1_1InternalUtility.html#a537bdbf04bc4bf3acc73770f9d64ed92',1,'Reqboost::InternalUtility']]],
+  ['unrewindablebodyerror_288',['UnrewindableBodyError',['../classReqboost_1_1Exceptions_1_1UnrewindableBodyError.html#ac77e0a07de8b43fd7d229c92b995ad9b',1,'Reqboost::Exceptions::UnrewindableBodyError']]],
+  ['urldecode_289',['urldecode',['../namespaceReqboost_1_1Utility.html#a597f8a0204dcf56544c43c257cccf4fd',1,'Reqboost::Utility']]],
+  ['urlencode_290',['urlencode',['../namespaceReqboost_1_1Utility.html#a8a735e257fa34592f2eaec31a7b2953d',1,'Reqboost::Utility']]],
+  ['urlrequired_291',['URLRequired',['../classReqboost_1_1Exceptions_1_1URLRequired.html#a5290d4124c9d06e09de08c9ce6952765',1,'Reqboost::Exceptions::URLRequired']]],
+  ['urlsplit_292',['urlsplit',['../namespaceReqboost_1_1Utility.html#a6d3209b948490afe881b9c99169bf4b4',1,'Reqboost::Utility']]],
+  ['urlunparse_293',['urlunparse',['../namespaceReqboost_1_1Utility.html#a63489a1132ba61e912ab7b0ff0d4b798',1,'Reqboost::Utility']]]
 ];

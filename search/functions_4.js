@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['filemodewarning_238',['FileModeWarning',['../classReqboost_1_1Exceptions_1_1FileModeWarning.html#acf7205a8907c0dbe07cd12192599e251',1,'Reqboost::Exceptions::FileModeWarning']]],
-  ['filesink_239',['FileSink',['../classReqboost_1_1Utility_1_1FileSink.html#a35c22cdad6e126816dc88ca4086c90e3',1,'Reqboost::Utility::FileSink']]]
+  ['decode_5futf8_240',['decode_utf8',['../namespaceReqboost_1_1Utility.html#aaa23cf0417fb76c49775803a5aabef83',1,'Reqboost::Utility']]]
 ];

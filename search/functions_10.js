@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['timeout_280',['Timeout',['../classReqboost_1_1Exceptions_1_1Timeout.html#af8ab1a187c531f4a54352358f465911e',1,'Reqboost::Exceptions::Timeout']]],
-  ['tonativestring_281',['ToNativeString',['../namespaceReqboost_1_1InternalUtility.html#a1195c0006157e3ecafb5492213f4a3a5',1,'Reqboost::InternalUtility']]],
-  ['toomanyredirects_282',['TooManyRedirects',['../classReqboost_1_1Exceptions_1_1TooManyRedirects.html#aabbe88dd5b13b7160ec1b28e6c1d0425',1,'Reqboost::Exceptions::TooManyRedirects']]]
+  ['session_281',['Session',['../classReqboost_1_1Sessions_1_1Session.html#a3169a8f10547c9a7f55182d812c1afe7',1,'Reqboost::Sessions::Session']]],
+  ['sslerror_282',['SSLError',['../classReqboost_1_1Exceptions_1_1SSLError.html#ad33a84df69e821bf87bebd313686920e',1,'Reqboost::Exceptions::SSLError']]],
+  ['streamconsumederror_283',['StreamConsumedError',['../classReqboost_1_1Exceptions_1_1StreamConsumedError.html#a45ff3bc94148ed78bc9d90954e9f8654',1,'Reqboost::Exceptions::StreamConsumedError']]]
 ];
