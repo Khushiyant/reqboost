@@ -1,41 +1,35 @@
-name: Doxygen Docs
+name: Build and Deploy Doxygen Docs
 
 on:
   workflow_dispatch:
   pull_request:
   push:
     branches:
-    - master
+      - main  # Change this to your default branch if different
 
 jobs:
   build:
+    name: Build Doxygen Docs
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Install Doxygen
-      run: sudo apt-get install doxygen graphviz
-    - name: Install Doxygen
-      run: doxygen
-    - name: Run Doxygen
-      run: doxygen Doxyfile
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: doxhtml
-        path: docs/html
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
     steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        name: doxhtml
-        path: docs/html
-    - name: Deploy to GitHub Pages
+        python-version: '3.x'
+
+    - name: Install Doxygen
+      run: sudo apt-get install -y doxygen graphviz
+
+    - name: Generate Doxygen documentation
+      run: doxygen Doxyfile
+
+    - name: Deploy documentation to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/html
-        
+        publish_dir: ./docs/html  
+        publish_branch: gh-pages
