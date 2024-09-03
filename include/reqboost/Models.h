@@ -129,7 +129,7 @@ namespace Reqboost
         {
             public:
                 std::string path_url(const std::string &url);
-                std::string encoding_params(const std::map<std::string, std::string> &data);
+                std::string encode_params(const std::map<std::string, std::string> &data);
 
             private:
                 ParsedURL urlsplit(const std::string &url);    
@@ -137,12 +137,12 @@ namespace Reqboost
         
         class RequestHooksMixin
         {
-            public:
-                void register_hook(const std::string &event, const std::function<void()> &hook);
-                bool deregister_hook(const std::string &event, const std::function<void()> &hook);
-            
-            private:
-                std::map<std::string, std::vector<std::function<void()>>> hooks;
+        public:
+            void register_hook(const std::string &event, const std::function<void()> &hook);
+            bool deregister_hook(const std::string &event, const std::function<void()> &hook);
+
+        private:
+            std::map<std::string, std::vector<std::function<void()>>> hooks;
         };
 
         class MultipartEncoder
