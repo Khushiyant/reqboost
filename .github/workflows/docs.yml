@@ -21,8 +21,8 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: doc
-        path: doc
+        name: docs/html
+        path: docs/html
 
   deploy:
     needs: build
@@ -31,11 +31,11 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v3
       with:
-        name: doc
-        path: doc
+        name: docs/html
+        path: docs/html
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./doc
+        publish_dir: ./docs/html
         
