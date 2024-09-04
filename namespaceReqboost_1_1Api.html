@@ -45,7 +45,6 @@
       <div class="m-col-l-10 m-push-l-1">
         <h1>
           <span class="m-breadcrumb"><a href="namespaceReqboost.html">Reqboost</a>::<wbr/></span>Api <span class="m-thin">namespace</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
         </h1>
         <p><span></span></p>
         <nav class="m-block m-default">
@@ -62,52 +61,377 @@
         <section id="func-members">
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
-            <dt id="abb39b9d3ff6e596a24cd608e359ad150">
-              <span class="m-doc-wrap-bumper">auto <a href="#abb39b9d3ff6e596a24cd608e359ad150" class="m-doc-self">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#abb39b9d3ff6e596a24cd608e359ad150" class="m-doc">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
               const std::string&amp; url,
               const py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a9fb5c9e3c756693db7c435be6b631dc6">
-              <span class="m-doc-wrap-bumper">auto <a href="#a9fb5c9e3c756693db7c435be6b631dc6" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              const py::dict params,
+            <dd>Makes a generic HTTP request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a0b593347f68f585618c02fd43d7c6ffe" class="m-doc">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd>Makes a GET request to the specified URL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab22236eeab427861d9a99fe739ed22d2" class="m-doc">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd>Makes a POST request to the specified URL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aef3384fef6bc8e869ad268f32a9b41e5" class="m-doc">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd>Makes a PUT request to the specified URL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa571b5c1eb90887ba39575f85fab9d67" class="m-doc">delete_</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab6ceb1da3cad3e98289316afb922ddc7">
-              <span class="m-doc-wrap-bumper">auto <a href="#ab6ceb1da3cad3e98289316afb922ddc7" class="m-doc-self">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              const py::dict data,
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aaa6ec3b28ffccf7f3a8400aa9fe8744e" class="m-doc">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a7ea0662ad50f5c1667b974d366268064">
-              <span class="m-doc-wrap-bumper">auto <a href="#a7ea0662ad50f5c1667b974d366268064" class="m-doc-self">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              const py::dict data,
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a73f70cea39c81f55cc8a58c5fc2dd4b0" class="m-doc">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd>Makes a PATCH request to the specified URL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8313e23be66457c0961443423c9d5d90" class="m-doc">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="afdeab4131c43c092e5f12b6710cd47c3">
-              <span class="m-doc-wrap-bumper">auto <a href="#afdeab4131c43c092e5f12b6710cd47c3" class="m-doc-self">remove</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab7b2e636d14c7fdda26788b66e7df13d" class="m-doc">delete_</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="aaa6ec3b28ffccf7f3a8400aa9fe8744e">
-              <span class="m-doc-wrap-bumper">auto <a href="#aaa6ec3b28ffccf7f3a8400aa9fe8744e" class="m-doc-self">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            <dd>Makes a DELETE request to the specified URL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a012c2c8d478f8f1fd8094854caede956" class="m-doc">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a1c2ab22a930b6583b7b4b40b8b64c329">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1c2ab22a930b6583b7b4b40b8b64c329" class="m-doc-self">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              const py::dict data,
-              py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            <dd>Makes a HEAD request to the specified URL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae1720bf6d49db908ee75d79d476d1cf7" class="m-doc">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a8313e23be66457c0961443423c9d5d90">
-              <span class="m-doc-wrap-bumper">auto <a href="#a8313e23be66457c0961443423c9d5d90" class="m-doc-self">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
-              py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
-            </dt>
-            <dd><span></span></dd>
+            <dd>Makes an OPTIONS request to the specified URL.</dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="abb39b9d3ff6e596a24cd608e359ad150"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abb39b9d3ff6e596a24cd608e359ad150" class="m-doc-self">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
+              const std::string&amp; url,
+              const py::kwargs kwargs)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a generic HTTP request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">method</td>
+                  <td>The HTTP method to use for the request.</td>
+                </tr>
+                <tr>
+                  <td>url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes an HTTP request using the specified method and URL. It can also accept optional parameters and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="a0b593347f68f585618c02fd43d7c6ffe"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0b593347f68f585618c02fd43d7c6ffe" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a GET request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>params</td>
+                  <td>Optional parameters for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes a GET request to the specified URL. It can also accept optional parameters and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="ab22236eeab427861d9a99fe739ed22d2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab22236eeab427861d9a99fe739ed22d2" class="m-doc-self">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a POST request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td>Optional data for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes a POST request to the specified URL. It can also accept optional data and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="aef3384fef6bc8e869ad268f32a9b41e5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aef3384fef6bc8e869ad268f32a9b41e5" class="m-doc-self">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a PUT request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td>Optional data for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes a PUT request to the specified URL. It can also accept optional data and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="aa571b5c1eb90887ba39575f85fab9d67"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa571b5c1eb90887ba39575f85fab9d67" class="m-doc-self">delete_</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8cpp.html">&lt;src/Api.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="aaa6ec3b28ffccf7f3a8400aa9fe8744e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aaa6ec3b28ffccf7f3a8400aa9fe8744e" class="m-doc-self">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8cpp.html">&lt;src/Api.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a73f70cea39c81f55cc8a58c5fc2dd4b0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a73f70cea39c81f55cc8a58c5fc2dd4b0" class="m-doc-self">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a PATCH request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td>Optional data for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes a PATCH request to the specified URL. It can also accept optional data and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="a8313e23be66457c0961443423c9d5d90"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8313e23be66457c0961443423c9d5d90" class="m-doc-self">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8cpp.html">&lt;src/Api.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ab7b2e636d14c7fdda26788b66e7df13d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab7b2e636d14c7fdda26788b66e7df13d" class="m-doc-self">delete_</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a DELETE request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>params</td>
+                  <td>Optional parameters for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes a DELETE request to the specified URL. It can also accept optional parameters and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="a012c2c8d478f8f1fd8094854caede956"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a012c2c8d478f8f1fd8094854caede956" class="m-doc-self">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes a HEAD request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>params</td>
+                  <td>Optional parameters for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes a HEAD request to the specified URL. It can also accept optional parameters and keyword arguments.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae1720bf6d49db908ee75d79d476d1cf7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Api::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae1720bf6d49db908ee75d79d476d1cf7" class="m-doc-self">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Api_8h.html">&lt;include/reqboost/Api.h&gt;</a></div>
+            </h3>
+            <p>Makes an OPTIONS request to the specified URL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL to send the request to.</td>
+                </tr>
+                <tr>
+                  <td>params</td>
+                  <td>Optional parameters for the request.</td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td>Optional keyword arguments for the request.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Reqboost::<wbr />Models::<wbr />Response</a> object containing the response from the server.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function makes an OPTIONS request to the specified URL. It can also accept optional parameters and keyword arguments.</p>
+          </div></section>
         </section>
       </div>
     </div>

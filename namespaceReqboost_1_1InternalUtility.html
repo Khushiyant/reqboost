@@ -67,21 +67,21 @@
               <span class="m-doc-wrap-bumper">enum class <a href="#aef820c58b049a58aa2ff8e2b79c96ad8" class="m-doc-self">StringType</a> { </span><span class="m-doc-wrap"><a href="#aef820c58b049a58aa2ff8e2b79c96ad8a600e754f49b68aa0fc90a9cd64eb7051" class="m-doc">Bytes</a>,
               <a href="#aef820c58b049a58aa2ff8e2b79c96ad8aebccbbd337efb2ddb5979c57125bad1b" class="m-doc">Str</a> }</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Enum for string type.</dd>
           </dl>
         </section>
         <section id="func-members">
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
-            <dt id="a1195c0006157e3ecafb5492213f4a3a5">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1195c0006157e3ecafb5492213f4a3a5" class="m-doc-self">ToNativeString</a>(</span><span class="m-doc-wrap">const std::string&amp; str,
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1195c0006157e3ecafb5492213f4a3a5" class="m-doc">ToNativeString</a>(</span><span class="m-doc-wrap">const std::string&amp; str,
               const std::string&amp; encoding) -&gt; std::string</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a537bdbf04bc4bf3acc73770f9d64ed92">
-              <span class="m-doc-wrap-bumper">auto <a href="#a537bdbf04bc4bf3acc73770f9d64ed92" class="m-doc-self">UnicodeIsAscii</a>(</span><span class="m-doc-wrap">const std::string&amp; u_string) -&gt; bool</span>
+            <dd>Convert a string to a native string.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a537bdbf04bc4bf3acc73770f9d64ed92" class="m-doc">UnicodeIsAscii</a>(</span><span class="m-doc-wrap">const std::string&amp; u_string) -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Check if a string contains only ASCII characters.</dd>
             <dt id="aeb39349c1f9996d17a93c131b4f0c33e">
               <span class="m-doc-wrap-bumper">auto <a href="#aeb39349c1f9996d17a93c131b4f0c33e" class="m-doc-self">kValidHeaderNameReByte</a>(</span><span class="m-doc-wrap">R&quot;(^[^:\s][^:\r\n]*$)&quot;) -&gt; const std::regex</span>
             </dt>
@@ -98,17 +98,87 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a3a3633792d8eda878b759465f0fab964" class="m-doc-self">kValidHeaderValueReStr</a>(</span><span class="m-doc-wrap">R&quot;(^\S[^\r\n]*$|^$)&quot;) -&gt; const std::regex</span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a1115bfe6608adea8c8584647f8bbf2b3">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1115bfe6608adea8c8584647f8bbf2b3" class="m-doc-self">kHeaderValidatorsByte</a>(</span><span class="m-doc-wrap"><a href="namespaceReqboost_1_1InternalUtility.html#aeb39349c1f9996d17a93c131b4f0c33e" class="m-doc">kValidHeaderNameReByte</a>,
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1115bfe6608adea8c8584647f8bbf2b3" class="m-doc">kHeaderValidatorsByte</a>(</span><span class="m-doc-wrap"><a href="namespaceReqboost_1_1InternalUtility.html#aeb39349c1f9996d17a93c131b4f0c33e" class="m-doc">kValidHeaderNameReByte</a>,
               <a href="namespaceReqboost_1_1InternalUtility.html#acb3375750f9214b0ccc84840a2d7c2d0" class="m-doc">kValidHeaderValueReByte</a>) -&gt; const std::tuple&lt;std::regex, std::regex&gt;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="abefe3271662a392f4ea3a3497f6d2029">
-              <span class="m-doc-wrap-bumper">auto <a href="#abefe3271662a392f4ea3a3497f6d2029" class="m-doc-self">kHeaderValidatorsStr</a>(</span><span class="m-doc-wrap"><a href="namespaceReqboost_1_1InternalUtility.html#a15d808245eda67420d5864e607a13c50" class="m-doc">kValidHeaderNameReStr</a>,
+            <dd>Tuple of regular expressions for validating HTTP header names and values.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#abefe3271662a392f4ea3a3497f6d2029" class="m-doc">kHeaderValidatorsStr</a>(</span><span class="m-doc-wrap"><a href="namespaceReqboost_1_1InternalUtility.html#a15d808245eda67420d5864e607a13c50" class="m-doc">kValidHeaderNameReStr</a>,
               <a href="namespaceReqboost_1_1InternalUtility.html#a3a3633792d8eda878b759465f0fab964" class="m-doc">kValidHeaderValueReStr</a>) -&gt; const std::tuple&lt;std::regex, std::regex&gt;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Tuple of regular expressions for validating HTTP header names and values as bytes.</dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a1195c0006157e3ecafb5492213f4a3a5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::string Reqboost::<wbr />InternalUtility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1195c0006157e3ecafb5492213f4a3a5" class="m-doc-self">ToNativeString</a>(</span><span class="m-doc-wrap">const std::string&amp; str,
+              const std::string&amp; encoding)</span></span>
+            </h3>
+            <p>Convert a string to a native string.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">str</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>encoding</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>std::string</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a537bdbf04bc4bf3acc73770f9d64ed92"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool Reqboost::<wbr />InternalUtility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a537bdbf04bc4bf3acc73770f9d64ed92" class="m-doc-self">UnicodeIsAscii</a>(</span><span class="m-doc-wrap">const std::string&amp; u_string)</span></span>
+            </h3>
+            <p>Check if a string contains only ASCII characters.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">u_string</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>true</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a1115bfe6608adea8c8584647f8bbf2b3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">const std::tuple&lt;std::regex, std::regex&gt; Reqboost::<wbr />InternalUtility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1115bfe6608adea8c8584647f8bbf2b3" class="m-doc-self">kHeaderValidatorsByte</a>(</span><span class="m-doc-wrap"><a href="namespaceReqboost_1_1InternalUtility.html#aeb39349c1f9996d17a93c131b4f0c33e" class="m-doc">kValidHeaderNameReByte</a>,
+              <a href="namespaceReqboost_1_1InternalUtility.html#acb3375750f9214b0ccc84840a2d7c2d0" class="m-doc">kValidHeaderValueReByte</a>)</span></span>
+            </h3>
+            <p>Tuple of regular expressions for validating HTTP header names and values.</p>
+<p>This tuple contains regular expressions for validating HTTP header names and values. The first element is a regular expression for validating header names, and the second element is a regular expression for validating header values.</p>
+          </div></section>
+          <section class="m-doc-details" id="abefe3271662a392f4ea3a3497f6d2029"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">const std::tuple&lt;std::regex, std::regex&gt; Reqboost::<wbr />InternalUtility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abefe3271662a392f4ea3a3497f6d2029" class="m-doc-self">kHeaderValidatorsStr</a>(</span><span class="m-doc-wrap"><a href="namespaceReqboost_1_1InternalUtility.html#a15d808245eda67420d5864e607a13c50" class="m-doc">kValidHeaderNameReStr</a>,
+              <a href="namespaceReqboost_1_1InternalUtility.html#a3a3633792d8eda878b759465f0fab964" class="m-doc">kValidHeaderValueReStr</a>)</span></span>
+            </h3>
+            <p>Tuple of regular expressions for validating HTTP header names and values as bytes.</p>
+<p>This tuple contains regular expressions for validating HTTP header names and values as bytes. The first element is a regular expression for validating header names, and the second element is a regular expression for validating header values.</p>
+          </div></section>
         </section>
       </div>
     </div>
