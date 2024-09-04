@@ -6,6 +6,11 @@ on:
   push:
     branches:
       - main  # Change this to your default branch if different
+    paths:
+      - 'Doxyfile-mcss'
+      - 'Doxyfile'
+      - 'include/**'
+      - 'src/**'
 
 jobs:
   build:
@@ -28,8 +33,14 @@ jobs:
     - name: Install Doxygen
       run: sudo apt-get install -y doxygen graphviz
 
-    - name: Generate Doxygen documentation
-      run: doxygen Doxyfile
+    - name: Install dependecies
+      run: pip install jinja2 Pygments
+
+    - name: Clone m.css
+      run: git clone https://github.com/mosra/m.css.git
+
+    - name: Build documentation
+      run: cd m.css/documentation && ./doxygen.py ../../Doxyfile-mcss
 
     - name: Deploy documentation to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

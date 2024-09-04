@@ -3,12 +3,12 @@ OUTPUT_DIRECTORY       = docs
 INPUT                  = README.md src include
 USE_MDFILE_AS_MAINPAGE = README.md
 IMAGE_PATH = ext
-GENERATE_XML           = NO
+
 GENERATE_LATEX         = NO
-GENERATE_HTML          = YES
 RECURSIVE              = YES
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_STATIC         = YES
-ENABLED_SECTIONS       =
+ENABLED_SECTIONS       = 
 MARKDOWN_SUPPORT       = YES
+
