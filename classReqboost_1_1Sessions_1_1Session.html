@@ -1,485 +1,186 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Reqboost: Reqboost::Sessions::Session Class Reference</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>Reqboost::Sessions::Session class | Reqboost</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Reqboost
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Reqboost</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceReqboost.html">Reqboost</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespaceReqboost_1_1Sessions.html">Sessions</a>::<wbr/></span>Session <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Sessions_8h.html">&lt;include/reqboost/Sessions.h&gt;</a></div>
+        </h1>
+        <p><span></span></p>
+        <nav class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a3169a8f10547c9a7f55182d812c1afe7">
+              <span class="m-doc-wrap-bumper"><a href="#a3169a8f10547c9a7f55182d812c1afe7" class="m-doc-self">Session</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a13e1ba1ac64d69a8f7a3093e3649241c">
+              <span class="m-doc-wrap-bumper"><a href="#a13e1ba1ac64d69a8f7a3093e3649241c" class="m-doc-self">~Session</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a73ea35ca4c6485c01cce2644f9c07f6a">
+              <span class="m-doc-wrap-bumper">auto <a href="#a73ea35ca4c6485c01cce2644f9c07f6a" class="m-doc-self">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
+              const std::string&amp; url,
+              const py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae017c7f527598158dd2143d00d6018b3">
+              <span class="m-doc-wrap-bumper">auto <a href="#ae017c7f527598158dd2143d00d6018b3" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a8b042ce27556bcdd492c88e1f8767bb0">
+              <span class="m-doc-wrap-bumper">auto <a href="#a8b042ce27556bcdd492c88e1f8767bb0" class="m-doc-self">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a8fc5aafd0949e470b8a121ce49430556">
+              <span class="m-doc-wrap-bumper">auto <a href="#a8fc5aafd0949e470b8a121ce49430556" class="m-doc-self">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a74154406e38e1c97cb0e8bd52f90aa41">
+              <span class="m-doc-wrap-bumper">auto <a href="#a74154406e38e1c97cb0e8bd52f90aa41" class="m-doc-self">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="acb04688f9691b865bb83d57af5ab1965">
+              <span class="m-doc-wrap-bumper">auto <a href="#acb04688f9691b865bb83d57af5ab1965" class="m-doc-self">remove</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab4373bb5005f98f56c95da502a2bb624">
+              <span class="m-doc-wrap-bumper">auto <a href="#ab4373bb5005f98f56c95da502a2bb624" class="m-doc-self">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa6cacbab2615c39fe9bf102fec51dbba">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa6cacbab2615c39fe9bf102fec51dbba" class="m-doc-self">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1ae73100429926b51e1fd7a66b57e468">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1ae73100429926b51e1fd7a66b57e468" class="m-doc-self">__enter__</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classReqboost_1_1Sessions_1_1Session.html" class="m-doc">Session</a>*</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aca1a698b637f8d43127472e54110a32d">
+              <span class="m-doc-wrap-bumper">void <a href="#aca1a698b637f8d43127472e54110a32d" class="m-doc-self">__exit__</a>(</span><span class="m-doc-wrap">const py::object&amp; exc_type,
+              const py::object&amp; exc_value,
+              const py::object&amp; traceback)</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- end header part -->
-<!-- Generated by Doxygen 1.9.1 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
-/* @license-end */
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespaceReqboost.html">Reqboost</a></li><li class="navelem"><a class="el" href="namespaceReqboost_1_1Sessions.html">Sessions</a></li><li class="navelem"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html">Session</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="classReqboost_1_1Sessions_1_1Session-members.html">List of all members</a>  </div>
-  <div class="headertitle">
-<div class="title">Reqboost::Sessions::Session Class Reference</div>  </div>
-</div><!--header-->
-<div class="contents">
-
-<p><code>#include &lt;<a class="el" href="Sessions_8h_source.html">Sessions.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a3169a8f10547c9a7f55182d812c1afe7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a3169a8f10547c9a7f55182d812c1afe7">Session</a> ()</td></tr>
-<tr class="separator:a3169a8f10547c9a7f55182d812c1afe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e1ba1ac64d69a8f7a3093e3649241c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a13e1ba1ac64d69a8f7a3093e3649241c">~Session</a> ()</td></tr>
-<tr class="separator:a13e1ba1ac64d69a8f7a3093e3649241c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73ea35ca4c6485c01cce2644f9c07f6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a73ea35ca4c6485c01cce2644f9c07f6a">request</a> (const std::string &amp;method, const std::string &amp;url, const py::kwargs kwargs)</td></tr>
-<tr class="separator:a73ea35ca4c6485c01cce2644f9c07f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae017c7f527598158dd2143d00d6018b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#ae017c7f527598158dd2143d00d6018b3">get</a> (const std::string &amp;url, const py::dict params=py::none(), py::kwargs kwargs={})</td></tr>
-<tr class="separator:ae017c7f527598158dd2143d00d6018b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b042ce27556bcdd492c88e1f8767bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a8b042ce27556bcdd492c88e1f8767bb0">post</a> (const std::string &amp;url, const py::dict data=py::none(), py::kwargs kwargs={})</td></tr>
-<tr class="separator:a8b042ce27556bcdd492c88e1f8767bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc5aafd0949e470b8a121ce49430556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a8fc5aafd0949e470b8a121ce49430556">put</a> (const std::string &amp;url, const py::dict data=py::none(), py::kwargs kwargs={})</td></tr>
-<tr class="separator:a8fc5aafd0949e470b8a121ce49430556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74154406e38e1c97cb0e8bd52f90aa41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a74154406e38e1c97cb0e8bd52f90aa41">patch</a> (const std::string &amp;url, const py::dict data=py::none(), py::kwargs kwargs={})</td></tr>
-<tr class="separator:a74154406e38e1c97cb0e8bd52f90aa41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb04688f9691b865bb83d57af5ab1965"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#acb04688f9691b865bb83d57af5ab1965">remove</a> (const std::string &amp;url, py::kwargs kwargs={})</td></tr>
-<tr class="separator:acb04688f9691b865bb83d57af5ab1965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4373bb5005f98f56c95da502a2bb624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#ab4373bb5005f98f56c95da502a2bb624">head</a> (const std::string &amp;url, py::kwargs kwargs={})</td></tr>
-<tr class="separator:ab4373bb5005f98f56c95da502a2bb624"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6cacbab2615c39fe9bf102fec51dbba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#aa6cacbab2615c39fe9bf102fec51dbba">options</a> (const std::string &amp;url, py::kwargs kwargs={})</td></tr>
-<tr class="separator:aa6cacbab2615c39fe9bf102fec51dbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae73100429926b51e1fd7a66b57e468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html">Session</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a1ae73100429926b51e1fd7a66b57e468">__enter__</a> ()</td></tr>
-<tr class="separator:a1ae73100429926b51e1fd7a66b57e468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca1a698b637f8d43127472e54110a32d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#aca1a698b637f8d43127472e54110a32d">__exit__</a> (const py::object &amp;exc_type, const py::object &amp;exc_value, const py::object &amp;traceback)</td></tr>
-<tr class="separator:aca1a698b637f8d43127472e54110a32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a1afd067fe03126368866e4fde2663b12"><td class="memItemLeft" align="right" valign="top">CURL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html#a1afd067fe03126368866e4fde2663b12">curl</a></td></tr>
-<tr class="separator:a1afd067fe03126368866e4fde2663b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3169a8f10547c9a7f55182d812c1afe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3169a8f10547c9a7f55182d812c1afe7">&#9670;&nbsp;</a></span>Session()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Reqboost::Sessions::Session::Session </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a13e1ba1ac64d69a8f7a3093e3649241c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13e1ba1ac64d69a8f7a3093e3649241c">&#9670;&nbsp;</a></span>~Session()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Reqboost::Sessions::Session::~Session </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1ae73100429926b51e1fd7a66b57e468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ae73100429926b51e1fd7a66b57e468">&#9670;&nbsp;</a></span>__enter__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Sessions_1_1Session.html">Session</a> * Reqboost::Sessions::Session::__enter__ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aca1a698b637f8d43127472e54110a32d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca1a698b637f8d43127472e54110a32d">&#9670;&nbsp;</a></span>__exit__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Reqboost::Sessions::Session::__exit__ </td>
-          <td>(</td>
-          <td class="paramtype">const py::object &amp;&#160;</td>
-          <td class="paramname"><em>exc_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::object &amp;&#160;</td>
-          <td class="paramname"><em>exc_value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::object &amp;&#160;</td>
-          <td class="paramname"><em>traceback</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae017c7f527598158dd2143d00d6018b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae017c7f527598158dd2143d00d6018b3">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::get </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::dict&#160;</td>
-          <td class="paramname"><em>params</em> = <code>py::none()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab4373bb5005f98f56c95da502a2bb624"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4373bb5005f98f56c95da502a2bb624">&#9670;&nbsp;</a></span>head()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::head </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa6cacbab2615c39fe9bf102fec51dbba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6cacbab2615c39fe9bf102fec51dbba">&#9670;&nbsp;</a></span>options()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::options </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a74154406e38e1c97cb0e8bd52f90aa41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74154406e38e1c97cb0e8bd52f90aa41">&#9670;&nbsp;</a></span>patch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::patch </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::dict&#160;</td>
-          <td class="paramname"><em>data</em> = <code>py::none()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8b042ce27556bcdd492c88e1f8767bb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b042ce27556bcdd492c88e1f8767bb0">&#9670;&nbsp;</a></span>post()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::post </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::dict&#160;</td>
-          <td class="paramname"><em>data</em> = <code>py::none()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8fc5aafd0949e470b8a121ce49430556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fc5aafd0949e470b8a121ce49430556">&#9670;&nbsp;</a></span>put()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::put </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::dict&#160;</td>
-          <td class="paramname"><em>data</em> = <code>py::none()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acb04688f9691b865bb83d57af5ab1965"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb04688f9691b865bb83d57af5ab1965">&#9670;&nbsp;</a></span>remove()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::remove </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a73ea35ca4c6485c01cce2644f9c07f6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73ea35ca4c6485c01cce2644f9c07f6a">&#9670;&nbsp;</a></span>request()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classReqboost_1_1Models_1_1Response.html">Models::Response</a> Reqboost::Sessions::Session::request </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>method</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const py::kwargs&#160;</td>
-          <td class="paramname"><em>kwargs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1afd067fe03126368866e4fde2663b12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1afd067fe03126368866e4fde2663b12">&#9670;&nbsp;</a></span>curl</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">CURL* Reqboost::Sessions::Session::curl</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/reqboost/<a class="el" href="Sessions_8h_source.html">Sessions.h</a></li>
-<li>src/<a class="el" href="Sessions_8cpp.html">Sessions.cpp</a></li>
-</ul>
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<script src="search-v2.js"></script>
+<script src="searchdata-v2.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Reqboost. Created with <a href="https://doxygen.org/">Doxygen</a> 1.9.1 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
 </body>
 </html>
