@@ -31,7 +31,7 @@ namespace Reqboost
             return request("PUT", url, kwargs);
         }
 
-        Models::Response remove(const std::string &url, py::kwargs kwargs)
+        Models::Response delete_(const std::string &url, py::kwargs kwargs)
         {
             return request("DELETE", url, kwargs);
         }

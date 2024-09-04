@@ -1,5 +1,13 @@
-#ifndef REQBOOST_HPP
-#define REQBOOST_HPP
+/**
+ * @file StatusCodes.h
+ * @brief HTTP status code constants and functions.
+ *
+ * This file defines constants for HTTP status codes and provides functions to
+ * work with them.
+ */
+
+#ifndef STATUSCODES_H
+#define STATUSCODES_H
 
 #include <string>
 #include <map>
@@ -7,11 +15,19 @@
 #include <iostream>
 
 namespace Reqboost {
-    // Forward declaration of the httpStatusCodes map
+    /**
+     * @brief map of HTTP status codes and their names
+     * 
+     */
     extern std::map<int, std::vector<std::string>> httpStatusCodes;
 
-    // Function to get the HTTP status code from its name
+    /**
+     * @brief Get the Status Code object
+     * 
+     * @param name 
+     * @return int 
+     */
     int getStatusCode(const std::string &name);
 }  // namespace Reqboost
 
-#endif  // REQBOOST_HPP
+#endif  //STATUSCODEST_P
