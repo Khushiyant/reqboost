@@ -65,6 +65,22 @@ namespace Reqboost
                 // Dunder methods
                 std::string __repr__();
 
+                /**
+                 * @brief Returns True if :attr:`status_code` is less than 400
+                 *
+                 * @return true
+                 * @return false
+                 */
+                bool __nonzero__();
+
+                /**
+                 * @brief Returns True if :attr:`status_code` is less than 400.
+                 *
+                 * @return true
+                 * @return false
+                 */
+                bool __bool__();
+
                 // property methods
                 bool ok() ;
 

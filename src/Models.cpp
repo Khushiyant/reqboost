@@ -71,6 +71,15 @@ namespace Reqboost
         {
             return "<Response [" + std::to_string(status_code) + "]>";
         }
+        bool Response::__nonzero__()
+        {
+            return this->ok();
+        }
+
+        bool Response::__bool__()
+        {
+            return this->ok();
+        }
 
 
         // property methods
