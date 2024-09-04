@@ -26,7 +26,7 @@ void bind_api(py::module_ &m)
             py::kw_only());
 
       m.def("remove",
-            &Reqboost::Api::remove,
+            &Reqboost::Api::delete_,
             "Perform an HTTP DELETE request and return the response",
             py::arg("url"),
             py::kw_only());

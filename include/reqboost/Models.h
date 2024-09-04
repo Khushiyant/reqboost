@@ -54,6 +54,13 @@ namespace Reqboost
 
                 // Methods
                 Exceptions::RequestException raise_for_status();
+                /**
+                 * @brief Content of the response in unicode
+                 * 
+                 * @return std::string 
+                 */
+                std::string text();
+
 
                 // Dunder methods
                 std::string __repr__();

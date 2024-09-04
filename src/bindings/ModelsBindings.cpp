@@ -19,6 +19,7 @@ void bind_models(py::module_ &m)
 
         // Dunder methods
         .def("__repr__", &Reqboost::Models::Response::__repr__)
+        .def_property_readonly("text", &Reqboost::Models::Response::text)
 
         // property methods
         .def("ok", &Reqboost::Models::Response::ok);

@@ -43,6 +43,29 @@ namespace Reqboost
                 throw Exceptions::HTTPError(http_error_message);
         }
 
+
+        std::string Response::text()
+        {
+            std::string content;
+
+            if (this->_content == "") // guessing encoding
+                return "";
+
+            if (this->encoding == "")
+                this->encoding = "utf-8";
+
+            try
+            {
+                content = Utility::decode_utf8(this->_content);
+            }
+            catch(const std::exception& e)
+            {
+                throw Exceptions::ContentDecodingError("Content decoding error: " + std::string(e.what()));
+            }
+            
+            return content;
+        }
+
         // Dunder methods
         std::string Response::__repr__()
         {

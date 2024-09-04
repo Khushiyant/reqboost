@@ -87,11 +87,10 @@ namespace Reqboost
          * This function makes a DELETE request to the specified URL. It can also accept optional parameters and keyword arguments.
          *
          * @param url The URL to send the request to.
-         * @param params Optional parameters for the request.
          * @param kwargs Optional keyword arguments for the request.
          * @return A Reqboost::Models::Response object containing the response from the server.
          */
-        Models::Response delete_(const std::string &url, const py::dict params = py::none(), py::kwargs kwargs = {});
+        Models::Response delete_(const std::string &url,  py::kwargs kwargs = {});
         
         /**
          * @brief Makes a HEAD request to the specified URL.
@@ -99,11 +98,10 @@ namespace Reqboost
          * This function makes a HEAD request to the specified URL. It can also accept optional parameters and keyword arguments.
          *
          * @param url The URL to send the request to.
-         * @param params Optional parameters for the request.
          * @param kwargs Optional keyword arguments for the request.
          * @return A Reqboost::Models::Response object containing the response from the server.
          */
-        Models::Response head(const std::string &url, const py::dict params = py::none(), py::kwargs kwargs = {});
+        Models::Response head(const std::string &url, py::kwargs kwargs = {});
         
         
         /**
@@ -112,11 +110,10 @@ namespace Reqboost
          * This function makes an OPTIONS request to the specified URL. It can also accept optional parameters and keyword arguments.
          *
          * @param url The URL to send the request to.
-         * @param params Optional parameters for the request.
          * @param kwargs Optional keyword arguments for the request.
          * @return A Reqboost::Models::Response object containing the response from the server.
          */
-        Models::Response options(const std::string &url, const py::dict params = py::none(), py::kwargs kwargs = {});
+        Models::Response options(const std::string &url, py::kwargs kwargs = {});
     }
 }
 
