@@ -11,7 +11,7 @@ namespace Reqboost
 
 
         // Methods
-        Exceptions::RequestException Response::raise_for_status()
+        void Response::raise_for_status()
         {
             std::string reason;
             if (std::is_same<decltype(reason), std::string>::value)

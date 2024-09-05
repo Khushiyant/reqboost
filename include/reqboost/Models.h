@@ -53,7 +53,7 @@ namespace Reqboost
                 std::string request;
 
                 // Methods
-                Exceptions::RequestException raise_for_status();
+                void raise_for_status();
                 /**
                  * @brief Content of the response in unicode
                  * 
