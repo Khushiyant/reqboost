@@ -39,10 +39,10 @@ namespace Reqboost
          * The first element is a regular expression for validating header names, and the second element is a regular expression for validating header values.
          */
         const std::tuple<std::regex, std::regex> kHeaderValidatorsStr(kValidHeaderNameReStr, kValidHeaderValueReStr);
-        
+
         /**
          * @brief Enum for string type
-         * 
+         *
          */
         enum class StringType
         {
@@ -52,19 +52,19 @@ namespace Reqboost
 
         /**
          * @brief Convert a string to a native string
-         * 
-         * @param str 
-         * @param encoding 
-         * @return std::string 
+         *
+         * @param str
+         * @param encoding
+         * @return std::string
          */
         std::string ToNativeString(const std::string &str, const std::string &encoding);
 
         /**
          * @brief Check if a string contains only ASCII characters
-         * 
-         * @param u_string 
-         * @return true 
-         * @return false 
+         *
+         * @param u_string
+         * @return true
+         * @return false
          */
         bool UnicodeIsAscii(const std::string &u_string);
 

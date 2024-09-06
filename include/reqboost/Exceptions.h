@@ -179,7 +179,7 @@ namespace Reqboost{
         class FileModeWarning : public RequestsWarning
         {
         public:
-            
+
             explicit FileModeWarning(const std::string &message);
         };
 

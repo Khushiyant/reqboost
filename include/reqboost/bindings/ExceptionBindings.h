@@ -8,7 +8,7 @@
 
 /**
  * @brief Intermediate function to bind exceptions
- * 
+ *
  * @param m pybind11 module
  */
 void bind_exceptions(pybind11::module &m);

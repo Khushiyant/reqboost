@@ -91,7 +91,7 @@ namespace Reqboost
          * @return A Reqboost::Models::Response object containing the response from the server.
          */
         Models::Response delete_(const std::string &url,  py::kwargs kwargs = {});
-        
+
         /**
          * @brief Makes a HEAD request to the specified URL.
          *
@@ -102,8 +102,8 @@ namespace Reqboost
          * @return A Reqboost::Models::Response object containing the response from the server.
          */
         Models::Response head(const std::string &url, py::kwargs kwargs = {});
-        
-        
+
+
         /**
          * @brief Makes an OPTIONS request to the specified URL.
          *

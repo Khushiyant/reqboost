@@ -68,7 +68,7 @@ pip install .
 * Use direct github installation
 
 ```bash
-pip install git+https://github.com/Khushiyant/reqboost.git 
+pip install git+https://github.com/Khushiyant/reqboost.git
 ```
 
 # Contribution

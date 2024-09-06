@@ -10,9 +10,9 @@ void bind_sessions(pybind11::module &m)
         .def("__enter__", &Reqboost::Sessions::Session::__enter__) // Enter method for context management
         .def("__exit__", &Reqboost::Sessions::Session::__exit__)   // Exit method for context management
         .def("request", &Reqboost::Sessions::Session::request,
-             "Perform an HTTP request and return the response", 
-             py::arg("method"), 
-             py::arg("url"), 
+             "Perform an HTTP request and return the response",
+             py::arg("method"),
+             py::arg("url"),
              py::kw_only())
         .def("get",
              &Reqboost::Sessions::Session::get,

@@ -19,7 +19,7 @@ namespace Reqboost
 
         Session * Session::__enter__()
         {
-            return this; 
+            return this;
         }
         void Session::__exit__(const py::object &exc_type, const py::object &exc_value, const py::object &traceback)
         {

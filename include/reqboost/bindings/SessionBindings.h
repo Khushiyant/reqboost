@@ -6,7 +6,7 @@
 
 /**
  * @brief Intermediate function to bind sessions
- * 
+ *
  * @param m pybind11 module
  */
 void bind_sessions(pybind11::module &m);

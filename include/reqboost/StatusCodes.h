@@ -17,15 +17,15 @@
 namespace Reqboost {
     /**
      * @brief map of HTTP status codes and their names
-     * 
+     *
      */
     extern std::map<int, std::vector<std::string>> httpStatusCodes;
 
     /**
      * @brief Get the Status Code object
-     * 
-     * @param name 
-     * @return int 
+     *
+     * @param name
+     * @return int
      */
     int getStatusCode(const std::string &name);
 }  // namespace Reqboost

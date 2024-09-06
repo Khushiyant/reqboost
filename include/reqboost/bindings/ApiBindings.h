@@ -9,7 +9,7 @@
 
 /**
  * @brief Intermediate function to bind API functions
- * 
+ *
  * @param m pybind11 module
  */
 void bind_api(pybind11::module &m);

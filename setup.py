@@ -1,10 +1,11 @@
-from setuptools import setup, Extension
-from setuptools.command.build_ext import build_ext
-import subprocess
 import os
+import re
+import subprocess
 import sys
 from pathlib import Path
-import re
+
+from setuptools import Extension, setup
+from setuptools.command.build_ext import build_ext
 
 PLAT_TO_CMAKE = {
     "win32": "Win32",
@@ -12,15 +13,20 @@ PLAT_TO_CMAKE = {
     "win-arm32": "ARM",
     "win-arm64": "ARM64",
 }
+
+
 def get_git_version():
     try:
-        version = subprocess.check_output(
-            ["git", "describe", "--tags", "--abbrev=0"]
-        ).decode().strip()
+        version = (
+            subprocess.check_output(["git", "describe", "--tags", "--abbrev=0"])
+            .decode()
+            .strip()
+        )
         return version
     except subprocess.CalledProcessError:
         return "0.0.0"
-    
+
+
 class CMakeExtension(Extension):
     def __init__(self, name: str, sourcedir: str = "") -> None:
         super().__init__(name, sources=[])
@@ -124,6 +130,7 @@ class CMakeBuild(build_ext):
             ["cmake", "--build", ".", *build_args], cwd=build_temp, check=True
         )
 
+
 setup(
     name="reqboost",
     version=get_git_version(),
@@ -131,9 +138,9 @@ setup(
     author_email="khushiyant2002@gmail.com",
     url="https://github.com/Khushiyant/reqboost",
     description="Python package for HTTP requests based on C++ libcurl and Poco",
-    long_description=open('README.md').read(),
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    ext_modules=[CMakeExtension('reqboost')],  # Dummy extension
+    ext_modules=[CMakeExtension("reqboost")],  # Dummy extension
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     python_requires=">=3.10",

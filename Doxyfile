@@ -9,6 +9,5 @@ RECURSIVE              = YES
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_STATIC         = YES
-ENABLED_SECTIONS       = 
+ENABLED_SECTIONS       =
 MARKDOWN_SUPPORT       = YES
-

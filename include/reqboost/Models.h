@@ -56,8 +56,8 @@ namespace Reqboost
                 void raise_for_status();
                 /**
                  * @brief Content of the response in unicode
-                 * 
-                 * @return std::string 
+                 *
+                 * @return std::string
                  */
                 std::string text();
 

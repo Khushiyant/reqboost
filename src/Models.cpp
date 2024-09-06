@@ -62,7 +62,7 @@ namespace Reqboost
             {
                 throw Exceptions::ContentDecodingError("Content decoding error: " + std::string(e.what()));
             }
-            
+
             return content;
         }
 
@@ -83,7 +83,7 @@ namespace Reqboost
 
 
         // property methods
-        bool Response::ok() 
+        bool Response::ok()
         {
             try
             {
@@ -96,7 +96,7 @@ namespace Reqboost
             }
 
             return true;
-            
+
         }
 
     } // namespace Models
