@@ -17,6 +17,9 @@ void bind_models(py::module_ &m)
         .def_readwrite("elapsed", &Reqboost::Models::Response::elapsed)
         .def_readwrite("request", &Reqboost::Models::Response::request)
 
+        .def_property_readonly("is_redirect", &Reqboost::Models::Response::is_redirect)
+        .def_property_readonly("is_permanent_redirect", &Reqboost::Models::Response::is_permanent_redirect)
+
         // Dunder methods
         .def("__repr__", &Reqboost::Models::Response::__repr__)
         .def_property_readonly("text", &Reqboost::Models::Response::text)

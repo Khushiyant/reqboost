@@ -14,6 +14,7 @@ namespace Reqboost
             if (curl)
             {
                 curl_easy_cleanup(curl);
+                curl = nullptr;
             }
         }
 
@@ -26,6 +27,7 @@ namespace Reqboost
             // Cleanup and close the session
             if (curl)
             {
+                curl_easy_cleanup(curl);
                 curl = nullptr;
             }
         }
@@ -41,7 +43,6 @@ namespace Reqboost
                 curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response._content);
                 curl_easy_perform(curl);
                 curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response.status_code);
-                curl_easy_cleanup(curl);
             }
 
             return response;
@@ -65,7 +66,7 @@ namespace Reqboost
             return Session::request("PUT", url, kwargs);
         }
 
-        Models::Response Session::remove(const std::string &url, py::kwargs kwargs)
+        Models::Response Session::delete_(const std::string &url, py::kwargs kwargs)
         {
             return request("DELETE", url, kwargs);
         }

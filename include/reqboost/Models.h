@@ -7,14 +7,26 @@
 #include <any>
 #include <vector>
 #include <utility>
+#include <unordered_set>
 
 #include "Exceptions.h"
+#include "StatusCodes.h"
 
 
 namespace Reqboost
 {
     namespace Models
     {
+        const std::unordered_set<int> REDIRECT_STATI = {
+            getStatusCode("moved"),
+            getStatusCode("found"),
+            getStatusCode("see_other"),
+            getStatusCode("not_modified"),
+            getStatusCode("use_proxy"),
+            getStatusCode("switch_proxy"),
+            getStatusCode("temporary_redirect"),
+            getStatusCode("permanent_redirect")};
+
         struct ParsedURL
         {
             std::string scheme;
@@ -42,7 +54,7 @@ namespace Reqboost
             public:
                 std::string _content;
                 int status_code;
-                std::map<std::string, std::string> headers;
+                std::map<std::string, std::string> headers ;
                 std::string url;
                 std::vector<Response> history;
                 std::string encoding;
@@ -53,6 +65,23 @@ namespace Reqboost
                 std::string request;
 
                 // Methods
+                /**
+                 * @brief True if this Response is a well-formed HTTP redirect that could have been processed automatically (by :meth:`Session.resolve_redirects`)
+                 *
+                 * @return true
+                 * @return false
+                 */
+                bool is_redirect();
+
+                /**
+                 * @brief True if this Response one of the permanent versions of redirect.
+                 *
+                 * @return true
+                 * @return false
+                 */
+                bool is_permanent_redirect();
+
+
                 void raise_for_status();
                 /**
                  * @brief Content of the response in unicode

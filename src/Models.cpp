@@ -11,6 +11,25 @@ namespace Reqboost
 
 
         // Methods
+
+
+        bool Response::is_redirect()
+        {
+            // Check if status code is in the range 300-399 and "Location" header is present
+            return  (REDIRECT_STATI.find(status_code) != REDIRECT_STATI.end());
+        }
+
+        bool Response::is_permanent_redirect()
+        {
+            int movedCode = getStatusCode("moved");
+            int permanentRedirectCode = getStatusCode("permanent_redirect");
+            if (movedCode == -1 || permanentRedirectCode == -1) {
+                // Handle the case where the status code is not found
+                return false;
+            }
+            return  (status_code == movedCode || status_code == permanentRedirectCode);
+        }
+
         void Response::raise_for_status()
         {
             std::string reason;
