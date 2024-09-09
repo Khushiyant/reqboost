@@ -8,7 +8,7 @@
 
 /**
  * @brief Intermediate function to bind utility
- * 
+ *
  * @param m pybind11 module
  */
 void bind_utility(pybind11::module &m);

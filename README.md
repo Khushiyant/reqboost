@@ -19,6 +19,7 @@ sudo apt-get update
 sudo apt-get install libcurl4-openssl-dev
 sudo apt-get install libpoco-dev
 sudo apt-get install pkg-config
+sudo apt-get install nlohmann-json3-dev
 ```
 
 ### Fedora-based Systems
@@ -28,7 +29,7 @@ sudo dnf update
 sudo dnf install libcurl-devel
 sudo dnf install poco-devel
 sudo dnf install pkg-config
-
+sudo dnf install nlohmann-json3-dev
 ```
 
 ## MacOS
@@ -37,6 +38,7 @@ sudo dnf install pkg-config
 brew install curl
 brew install poco
 brew install pkgconfig
+brew install nlohmann-json
 ```
 
 ## Windows
@@ -68,7 +70,7 @@ pip install .
 * Use direct github installation
 
 ```bash
-pip install git+https://github.com/Khushiyant/reqboost.git 
+pip install git+https://github.com/Khushiyant/reqboost.git
 ```
 
 # Contribution

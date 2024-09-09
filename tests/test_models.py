@@ -1,4 +1,5 @@
-from reqboost import Response, ParsedURL  # Assuming bindings expose these correctly
+from reqboost import ParsedURL, Response  # Assuming bindings expose these correctly
+
 
 def test_response_initialization():
     response = Response()
@@ -12,10 +13,12 @@ def test_response_initialization():
     assert response.elapsed == ""
     assert response.request == ""
 
+
 def test_response_repr():
     response = Response()
     response.status_code = 404
     assert repr(response) == "<Response [404]>"
+
 
 def test_parsedurl_initialization():
     parsed_url = ParsedURL()
@@ -24,6 +27,7 @@ def test_parsedurl_initialization():
     assert parsed_url.path == ""
     assert parsed_url.query == ""
     assert parsed_url.fragment == ""
+
 
 def test_parsedurl_attributes():
     parsed_url = ParsedURL()

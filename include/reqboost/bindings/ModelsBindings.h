@@ -7,7 +7,7 @@
 
 /**
  * @brief Intermediate function to bind models
- * 
+ *
  * @param m pybind11 module
  */
 void bind_models(pybind11::module &m);
