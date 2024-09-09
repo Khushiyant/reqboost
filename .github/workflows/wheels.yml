@@ -32,7 +32,7 @@ jobs:
     - name: Install external dependencies (macOS)
       if: matrix.os == 'macos-latest'
       run: |
-        brew install poco curl pkg-config
+        brew install poco curl pkg-config nlohmann-json
 
     - name: Build the package with setup.py
       run: |
