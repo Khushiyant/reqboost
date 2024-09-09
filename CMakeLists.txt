@@ -2,6 +2,8 @@
 
 cmake_minimum_required(VERSION 3.4...3.18)
 project(reqboost LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Python interpreter and libraries using the new FindPython module
 find_package(Python 3.10 REQUIRED COMPONENTS Interpreter Development)
@@ -18,6 +20,9 @@ find_package(pybind11 REQUIRED)
 find_package(CURL REQUIRED)
 find_package(Poco REQUIRED Foundation Net)
 
+# Find brew install nlohmann-json
+find_package(nlohmann_json REQUIRED)
+
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/include/reqboost ${CMAKE_SOURCE_DIR}/include/reqboost/bindings ${CURL_INCLUDE_DIRS} ${Poco_INCLUDE_DIRS})
 
@@ -28,7 +33,7 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 pybind11_add_module(reqboost ${SOURCES})
 
 # Link libraries
-target_link_libraries(reqboost PRIVATE ${CURL_LIBRARIES} Poco::Foundation Poco::Net)
+target_link_libraries(reqboost PRIVATE ${CURL_LIBRARIES} Poco::Foundation Poco::Net nlohmann_json::nlohmann_json)
 
 # Set C++ standard
 set_target_properties(reqboost PROPERTIES

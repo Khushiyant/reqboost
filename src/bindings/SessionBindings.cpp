@@ -32,8 +32,8 @@ void bind_sessions(pybind11::module &m)
              py::arg("url"),
              py::arg("data") = py::dict(),
              py::kw_only())
-        .def("remove",
-             &Reqboost::Sessions::Session::remove,
+        .def("delete",
+             &Reqboost::Sessions::Session::delete_,
              "Perform an HTTP DELETE request and return the response",
              py::arg("url"),
              py::kw_only())
