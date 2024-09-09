@@ -27,7 +27,7 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y libcurl4-openssl-dev libpoco-dev pkg-config
+        sudo apt-get install -y libcurl4-openssl-dev libpoco-dev pkg-config nlohmann-json3-dev
 
     - name: Install external dependencies (macOS)
       if: matrix.os == 'macos-latest'
