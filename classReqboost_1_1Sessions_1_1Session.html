@@ -76,62 +76,355 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="a73ea35ca4c6485c01cce2644f9c07f6a">
-              <span class="m-doc-wrap-bumper">auto <a href="#a73ea35ca4c6485c01cce2644f9c07f6a" class="m-doc-self">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a73ea35ca4c6485c01cce2644f9c07f6a" class="m-doc">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
               const std::string&amp; url,
               const py::kwargs kwargs) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="ae017c7f527598158dd2143d00d6018b3">
-              <span class="m-doc-wrap-bumper">auto <a href="#ae017c7f527598158dd2143d00d6018b3" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>Base request method.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae017c7f527598158dd2143d00d6018b3" class="m-doc">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               const py::dict params = py::none(),
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a8b042ce27556bcdd492c88e1f8767bb0">
-              <span class="m-doc-wrap-bumper">auto <a href="#a8b042ce27556bcdd492c88e1f8767bb0" class="m-doc-self">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>GET request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8b042ce27556bcdd492c88e1f8767bb0" class="m-doc">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               const py::dict data = py::none(),
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a8fc5aafd0949e470b8a121ce49430556">
-              <span class="m-doc-wrap-bumper">auto <a href="#a8fc5aafd0949e470b8a121ce49430556" class="m-doc-self">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>POST request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8fc5aafd0949e470b8a121ce49430556" class="m-doc">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               const py::dict data = py::none(),
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a74154406e38e1c97cb0e8bd52f90aa41">
-              <span class="m-doc-wrap-bumper">auto <a href="#a74154406e38e1c97cb0e8bd52f90aa41" class="m-doc-self">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>PUT request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a74154406e38e1c97cb0e8bd52f90aa41" class="m-doc">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               const py::dict data = py::none(),
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="acb04688f9691b865bb83d57af5ab1965">
-              <span class="m-doc-wrap-bumper">auto <a href="#acb04688f9691b865bb83d57af5ab1965" class="m-doc-self">remove</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>PATCH request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a4fe8938720e0fb7ed1f398c14df746e6" class="m-doc">delete_</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="ab4373bb5005f98f56c95da502a2bb624">
-              <span class="m-doc-wrap-bumper">auto <a href="#ab4373bb5005f98f56c95da502a2bb624" class="m-doc-self">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>DELETE request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab4373bb5005f98f56c95da502a2bb624" class="m-doc">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="aa6cacbab2615c39fe9bf102fec51dbba">
-              <span class="m-doc-wrap-bumper">auto <a href="#aa6cacbab2615c39fe9bf102fec51dbba" class="m-doc-self">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+            <dd>HEAD request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa6cacbab2615c39fe9bf102fec51dbba" class="m-doc">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
               py::kwargs kwargs = {}) -&gt; <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a1ae73100429926b51e1fd7a66b57e468">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1ae73100429926b51e1fd7a66b57e468" class="m-doc-self">__enter__</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classReqboost_1_1Sessions_1_1Session.html" class="m-doc">Session</a>*</span>
+            <dd>OPTIONS request.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1ae73100429926b51e1fd7a66b57e468" class="m-doc">__enter__</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classReqboost_1_1Sessions_1_1Session.html" class="m-doc">Session</a>*</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="aca1a698b637f8d43127472e54110a32d">
-              <span class="m-doc-wrap-bumper">void <a href="#aca1a698b637f8d43127472e54110a32d" class="m-doc-self">__exit__</a>(</span><span class="m-doc-wrap">const py::object&amp; exc_type,
+            <dd>Handles the <strong>enter</strong> method of the <a href="classReqboost_1_1Sessions_1_1Session.html" class="m-doc">Session</a> class.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#aca1a698b637f8d43127472e54110a32d" class="m-doc">__exit__</a>(</span><span class="m-doc-wrap">const py::object&amp; exc_type,
               const py::object&amp; exc_value,
               const py::object&amp; traceback)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Handles python side of the <strong>exit</strong> method.</dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a73ea35ca4c6485c01cce2644f9c07f6a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a73ea35ca4c6485c01cce2644f9c07f6a" class="m-doc-self">request</a>(</span><span class="m-doc-wrap">const std::string&amp; method,
+              const std::string&amp; url,
+              const py::kwargs kwargs)</span></span>
+            </h3>
+            <p>Base request method.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">method</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ae017c7f527598158dd2143d00d6018b3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae017c7f527598158dd2143d00d6018b3" class="m-doc-self">get</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict params = py::none(),
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>GET request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>params</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a8b042ce27556bcdd492c88e1f8767bb0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8b042ce27556bcdd492c88e1f8767bb0" class="m-doc-self">post</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>POST request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a8fc5aafd0949e470b8a121ce49430556"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8fc5aafd0949e470b8a121ce49430556" class="m-doc-self">put</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>PUT request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a74154406e38e1c97cb0e8bd52f90aa41"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a74154406e38e1c97cb0e8bd52f90aa41" class="m-doc-self">patch</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              const py::dict data = py::none(),
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>PATCH request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a4fe8938720e0fb7ed1f398c14df746e6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4fe8938720e0fb7ed1f398c14df746e6" class="m-doc-self">delete_</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>DELETE request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab4373bb5005f98f56c95da502a2bb624"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab4373bb5005f98f56c95da502a2bb624" class="m-doc-self">head</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>HEAD request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aa6cacbab2615c39fe9bf102fec51dbba"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a> Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa6cacbab2615c39fe9bf102fec51dbba" class="m-doc-self">options</a>(</span><span class="m-doc-wrap">const std::string&amp; url,
+              py::kwargs kwargs = {})</span></span>
+            </h3>
+            <p>OPTIONS request.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>kwargs</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Models::<wbr />Response</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a1ae73100429926b51e1fd7a66b57e468"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="classReqboost_1_1Sessions_1_1Session.html" class="m-doc">Session</a>* Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1ae73100429926b51e1fd7a66b57e468" class="m-doc-self">__enter__</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Handles the <strong>enter</strong> method of the <a href="classReqboost_1_1Sessions_1_1Session.html" class="m-doc">Session</a> class.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>Session*</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aca1a698b637f8d43127472e54110a32d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Reqboost::<wbr />Sessions::<wbr />Session::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aca1a698b637f8d43127472e54110a32d" class="m-doc-self">__exit__</a>(</span><span class="m-doc-wrap">const py::object&amp; exc_type,
+              const py::object&amp; exc_value,
+              const py::object&amp; traceback)</span></span>
+            </h3>
+            <p>Handles python side of the <strong>exit</strong> method.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">exc_type</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>exc_value</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>traceback</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
         </section>
       </div>
     </div>

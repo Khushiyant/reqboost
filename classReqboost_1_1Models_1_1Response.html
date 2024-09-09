@@ -73,6 +73,14 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a18bb8a14960356efc863828cabd19a0b" class="m-doc">is_redirect</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
+            </dt>
+            <dd>True if this <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Response</a> is a well-formed HTTP redirect that could have been processed automatically (by :meth:<code>Session.resolve_redirects</code>)</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab6cdb5ef79a671a52d49a15bab4a21b3" class="m-doc">is_permanent_redirect</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
+            </dt>
+            <dd>True if this <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Response</a> one of the permanent versions of redirect.</dd>
             <dt id="a86a4c58534227e7b67468de840767bd3">
               <span class="m-doc-wrap-bumper">void <a href="#a86a4c58534227e7b67468de840767bd3" class="m-doc-self">raise_for_status</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
@@ -85,6 +93,14 @@
               <span class="m-doc-wrap-bumper">auto <a href="#ad1da7501920c5f50c25801d8b8413d60" class="m-doc-self">__repr__</a>(</span><span class="m-doc-wrap">) -&gt; std::string</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad73e1fab8175fda9c6e8a6554d94ef88" class="m-doc">__nonzero__</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
+            </dt>
+            <dd>Returns True if :attr:<code>status_code</code> is less than 400.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8f825e93345d79ff3b9e628823a04910" class="m-doc">__bool__</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
+            </dt>
+            <dd>Returns True if :attr:<code>status_code</code> is less than 400.</dd>
             <dt id="a8ef4b2b72ed5d91bbb588150796b31a9">
               <span class="m-doc-wrap-bumper">auto <a href="#a8ef4b2b72ed5d91bbb588150796b31a9" class="m-doc-self">ok</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
             </dt>
@@ -138,6 +154,34 @@
         </section>
         <section>
           <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a18bb8a14960356efc863828cabd19a0b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool Reqboost::<wbr />Models::<wbr />Response::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a18bb8a14960356efc863828cabd19a0b" class="m-doc-self">is_redirect</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>True if this <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Response</a> is a well-formed HTTP redirect that could have been processed automatically (by :meth:<code>Session.resolve_redirects</code>)</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab6cdb5ef79a671a52d49a15bab4a21b3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool Reqboost::<wbr />Models::<wbr />Response::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab6cdb5ef79a671a52d49a15bab4a21b3" class="m-doc-self">is_permanent_redirect</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>True if this <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Response</a> one of the permanent versions of redirect.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
           <section class="m-doc-details" id="afe10ceeb1829e58f8d0c29efd214824e"><div>
             <h3>
               <span class="m-doc-wrap-bumper">std::string Reqboost::<wbr />Models::<wbr />Response::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afe10ceeb1829e58f8d0c29efd214824e" class="m-doc-self">text</a>(</span><span class="m-doc-wrap">)</span></span>
@@ -148,6 +192,34 @@
                 <tr>
                   <th style="width: 1%">Returns</th>
                   <td>std::string</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ad73e1fab8175fda9c6e8a6554d94ef88"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool Reqboost::<wbr />Models::<wbr />Response::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad73e1fab8175fda9c6e8a6554d94ef88" class="m-doc-self">__nonzero__</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Returns True if :attr:<code>status_code</code> is less than 400.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a8f825e93345d79ff3b9e628823a04910"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool Reqboost::<wbr />Models::<wbr />Response::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8f825e93345d79ff3b9e628823a04910" class="m-doc-self">__bool__</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Returns True if :attr:<code>status_code</code> is less than 400.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true</td>
                 </tr>
               </tfoot>
             </table>
