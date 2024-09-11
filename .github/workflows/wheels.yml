@@ -30,6 +30,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y libcurl4-openssl-dev libpoco-dev pkg-config nlohmann-json3-dev
+        pip install auditwheel
 
     - name: Install external dependencies (macOS)
       if: matrix.os == 'macos-latest'
@@ -41,7 +42,12 @@ jobs:
         pip install wheel twine pybind11 cmake pytest setuptools
         python setup.py clean --all
         python setup.py sdist bdist_wheel
-        pip install dist/*.whl
+        if [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
+          auditwheel repair dist/*.whl  # Make Linux wheels manylinux compliant
+          pip install dist/wheelhouse/*.whl
+        else
+          pip install dist/*.whl
+        fi
 
     - name: Run tests
       run: |
@@ -49,7 +55,10 @@ jobs:
 
     - name: Publish to PyPI
       run: |
-        twine upload --skip-existing dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
+        if [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
+          twine upload --skip-existing dist/wheelhouse/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
+        else
+          twine upload --skip-existing dist/*.whl -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
 
 
     - name: Verify package installation
