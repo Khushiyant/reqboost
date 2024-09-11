@@ -22,9 +22,9 @@ def get_git_version():
             .decode()
             .strip()
         )
-        return version
     except subprocess.CalledProcessError:
-        return "0.0.0"
+        version = "0.0.0"
+    return version
 
 
 class CMakeExtension(Extension):
