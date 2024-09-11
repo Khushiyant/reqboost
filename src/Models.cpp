@@ -40,7 +40,7 @@ namespace Reqboost
             return  (status_code == movedCode || status_code == permanentRedirectCode);
         }
 
-        void Response::raise_for_status()
+        Exceptions::RequestException Response::raise_for_status()
         {
             std::string reason;
             if (std::is_same<decltype(reason), std::string>::value)
@@ -71,7 +71,6 @@ namespace Reqboost
             if (http_error_message != "")
                 throw Exceptions::HTTPError(http_error_message);
         }
-
 
         std::string Response::text()
         {

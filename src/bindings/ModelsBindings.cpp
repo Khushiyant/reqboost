@@ -46,16 +46,20 @@ void bind_models(py::module_ &m)
         .def(py::init<>()) // Bind the default constructor
         .def_readwrite("params", &Reqboost::Models::RequestOptions::params)
         .def_readwrite("data", &Reqboost::Models::RequestOptions::data);
-    
+
     py::class_<Reqboost::Models::Request>(m, "Request")
-        .def(py::init<>()) // Default constructor
-        .def(py::init<const std::string&, const std::string&>()) // Constructor with method and url
-        .def_readwrite("method", &Reqboost::Models::Request::method)
-        .def_readwrite("url", &Reqboost::Models::Request::url)
-        .def_readwrite("headers", &Reqboost::Models::Request::headers)
-        .def_readwrite("files", &Reqboost::Models::Request::files)
-        .def_readwrite("data", &Reqboost::Models::Request::data)
-        .def_readwrite("params", &Reqboost::Models::Request::params)
+        .def(py::init<const std::string&, const std::string&, 
+                      const std::map<std::string, std::string>&, 
+                      const std::vector<std::pair<std::string, std::string>>&, 
+                      const std::vector<std::pair<std::string, std::string>>&, 
+                      const std::map<std::string, std::string>&, 
+                      const std::map<std::string, std::function<void()>>&>(),
+             py::arg("method") = "", py::arg("url") = "", py::arg("headers") = std::map<std::string, std::string>(),
+             py::arg("files") = std::vector<std::pair<std::string, std::string>>(),
+             py::arg("data") = std::vector<std::pair<std::string, std::string>>(),
+             py::arg("params") = std::map<std::string, std::string>(),
+             py::arg("hooks") = std::map<std::string, std::function<void()>>()
+        )
         .def("prepare", &Reqboost::Models::Request::prepare)
         .def("__repr__", &Reqboost::Models::Request::repr);
         // .def_readwrite("auth", &Reqboost::Models::Request::auth)
@@ -63,11 +67,11 @@ void bind_models(py::module_ &m)
 
     py::class_<Reqboost::Models::PreparedRequest, std::shared_ptr<Reqboost::Models::PreparedRequest>>(m, "PreparedRequest")
         .def(py::init<>()) // Default constructor
-        .def_readwrite("method", &Reqboost::Models::PreparedRequest::method)
-        .def_readwrite("url", &Reqboost::Models::PreparedRequest::url)
-        .def_readwrite("headers", &Reqboost::Models::PreparedRequest::headers)
-        .def_readwrite("body", &Reqboost::Models::PreparedRequest::body)
         .def("prepare", &Reqboost::Models::PreparedRequest::prepare)
         .def("__repr__", &Reqboost::Models::PreparedRequest::repr);
+        // .def_readwrite("method", &Reqboost::Models::PreparedRequest::method)
+        // .def_readwrite("url", &Reqboost::Models::PreparedRequest::url)
+        // .def_readwrite("headers", &Reqboost::Models::PreparedRequest::headers)
+        // .def_readwrite("body", &Reqboost::Models::PreparedRequest::body)
         // .def("copy", &Reqboost::Models::PreparedRequest::copy);
 }
