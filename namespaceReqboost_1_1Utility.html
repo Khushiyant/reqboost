@@ -106,27 +106,27 @@
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#aaa23cf0417fb76c49775803a5aabef83" class="m-doc">decode_utf8</a>(</span><span class="m-doc-wrap">const std::string&amp; encoded) -&gt; std::string</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Decode a UTF-8 encoded string.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a63489a1132ba61e912ab7b0ff0d4b798" class="m-doc">urlunparse</a>(</span><span class="m-doc-wrap">const <a href="structReqboost_1_1Models_1_1ParsedURL.html" class="m-doc">Models::<wbr />ParsedURL</a>&amp; parsed) -&gt; std::string</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Unparse a ParsedURL object into a URL string.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a8a735e257fa34592f2eaec31a7b2953d" class="m-doc">urlencode</a>(</span><span class="m-doc-wrap">const std::string&amp; decoded) -&gt; std::string</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>URL encode a string.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a597f8a0204dcf56544c43c257cccf4fd" class="m-doc">urldecode</a>(</span><span class="m-doc-wrap">const std::string&amp; encoded) -&gt; std::string</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>URL decode a string.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a6d3209b948490afe881b9c99169bf4b4" class="m-doc">urlsplit</a>(</span><span class="m-doc-wrap">const std::string&amp; url) -&gt; <a href="structReqboost_1_1Models_1_1ParsedURL.html" class="m-doc">Models::<wbr />ParsedURL</a></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Split a URL into its components.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a7559099aa6b6410584587863e20f0447" class="m-doc">parse_header_links</a>(</span><span class="m-doc-wrap">std::string value) -&gt; std::vector&lt;std::map&lt;std::string, std::string&gt;&gt;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Parse a header links string into a vector of maps.</dd>
           </dl>
         </section>
         <section>
@@ -153,42 +153,150 @@
               <span class="m-doc-wrap-bumper">std::string Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aaa23cf0417fb76c49775803a5aabef83" class="m-doc-self">decode_utf8</a>(</span><span class="m-doc-wrap">const std::string&amp; encoded)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Decode a UTF-8 encoded string.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">encoded</td>
+                  <td>The UTF-8 encoded string to decode.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The decoded string.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a UTF-8 encoded string and decodes it into a regular string.</p>
           </div></section>
           <section class="m-doc-details" id="a63489a1132ba61e912ab7b0ff0d4b798"><div>
             <h3>
               <span class="m-doc-wrap-bumper">std::string Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a63489a1132ba61e912ab7b0ff0d4b798" class="m-doc-self">urlunparse</a>(</span><span class="m-doc-wrap">const <a href="structReqboost_1_1Models_1_1ParsedURL.html" class="m-doc">Models::<wbr />ParsedURL</a>&amp; parsed)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Unparse a ParsedURL object into a URL string.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">parsed</td>
+                  <td>The ParsedURL object to unparse.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The URL string.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a ParsedURL object and unparse it into a URL string.</p>
           </div></section>
           <section class="m-doc-details" id="a8a735e257fa34592f2eaec31a7b2953d"><div>
             <h3>
               <span class="m-doc-wrap-bumper">std::string Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8a735e257fa34592f2eaec31a7b2953d" class="m-doc-self">urlencode</a>(</span><span class="m-doc-wrap">const std::string&amp; decoded)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>URL encode a string.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">decoded</td>
+                  <td>The string to URL encode.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The URL encoded string.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a string and URL encodes it, replacing special characters with their corresponding escape sequences.</p>
           </div></section>
           <section class="m-doc-details" id="a597f8a0204dcf56544c43c257cccf4fd"><div>
             <h3>
               <span class="m-doc-wrap-bumper">std::string Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a597f8a0204dcf56544c43c257cccf4fd" class="m-doc-self">urldecode</a>(</span><span class="m-doc-wrap">const std::string&amp; encoded)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>URL decode a string.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">encoded</td>
+                  <td>The URL encoded string to decode.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The decoded string.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a URL encoded string and decodes it, replacing escape sequences with their corresponding special characters.</p>
           </div></section>
           <section class="m-doc-details" id="a6d3209b948490afe881b9c99169bf4b4"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a href="structReqboost_1_1Models_1_1ParsedURL.html" class="m-doc">Models::<wbr />ParsedURL</a> Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6d3209b948490afe881b9c99169bf4b4" class="m-doc-self">urlsplit</a>(</span><span class="m-doc-wrap">const std::string&amp; url)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Split a URL into its components.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">url</td>
+                  <td>The URL string to split.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A ParsedURL object representing the URL components.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a URL string and splits it into its components, returning a ParsedURL object.</p>
           </div></section>
           <section class="m-doc-details" id="a7559099aa6b6410584587863e20f0447"><div>
             <h3>
               <span class="m-doc-wrap-bumper">std::vector&lt;std::map&lt;std::string, std::string&gt;&gt; Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7559099aa6b6410584587863e20f0447" class="m-doc-self">parse_header_links</a>(</span><span class="m-doc-wrap">std::string value)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Parse a header links string into a vector of maps.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">value</td>
+                  <td>The header links string to parse.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A vector of maps, where each map represents a link.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a string representing a header links value and parses it into a vector of maps, where each map represents a link.</p>
           </div></section>
         </section>
       </div>
