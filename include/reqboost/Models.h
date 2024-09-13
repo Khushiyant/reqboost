@@ -90,9 +90,10 @@ namespace Reqboost
                  */
                 std::string text();
 
+                std::map<std::string, std::map<std::string, std::string>> links();
 
-                // Dunder methods
-                std::string __repr__();
+                    // Dunder methods
+                    std::string __repr__();
 
                 /**
                  * @brief Returns True if :attr:`status_code` is less than 400

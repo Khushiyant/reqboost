@@ -85,6 +85,34 @@ namespace Reqboost
             return content;
         }
 
+        std::map<std::string, std::map<std::string, std::string>> Response::links()
+        {
+            std::map<std::string, std::map<std::string, std::string>> resolved_links;
+
+            auto header = headers.find("link");
+            if (header != headers.end())
+            {
+                auto links = Utility::parse_header_links(header->second);
+
+                for (const auto &link : links)
+                {
+                    std::string key;
+                    if (link.find("rel") != link.end())
+                    {
+                        key = link.at("rel");
+                    }
+                    else if (link.find("url") != link.end())
+                    {
+                        key = link.at("url");
+                    }
+
+                    resolved_links[key] = link;
+                }
+            }
+
+            return resolved_links;
+        }
+
         // Dunder methods
         std::string Response::__repr__()
         {

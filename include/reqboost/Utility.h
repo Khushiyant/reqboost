@@ -10,11 +10,12 @@
 #include <fstream>
 #include <iostream>
 #include <codecvt>
-
+#include <regex>
 #include "Models.h"
 
 namespace Reqboost {
     namespace Utility{
+        std::vector<std::map<std::string, std::string>> parse_header_links(std::string value);
         std::string decode_utf8(const std::string &encoded);
         std::string urlencode(const std::string &decoded);
         std::string urldecode(const std::string &encoded);
