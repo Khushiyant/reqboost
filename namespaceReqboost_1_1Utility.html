@@ -100,9 +100,9 @@
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a96905c9cb3c32d831af3f3aaf2ae6e66" class="m-doc">parse_header_links</a>(</span><span class="m-doc-wrap">const std::string&amp; value) -&gt; std::vector&lt;std::map&lt;std::string, std::string&gt;&gt;</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a190e09ec535f615cfe6e2809ae119562" class="m-doc">parse_header_links</a>(</span><span class="m-doc-wrap">const std::string&amp; value) -&gt; std::vector&lt;std::map&lt;std::string, std::string&gt;&gt;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Parse a header links string into a vector of maps.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#aaa23cf0417fb76c49775803a5aabef83" class="m-doc">decode_utf8</a>(</span><span class="m-doc-wrap">const std::string&amp; encoded) -&gt; std::string</span>
             </dt>
@@ -123,10 +123,6 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a6d3209b948490afe881b9c99169bf4b4" class="m-doc">urlsplit</a>(</span><span class="m-doc-wrap">const std::string&amp; url) -&gt; <a href="structReqboost_1_1Models_1_1ParsedURL.html" class="m-doc">Models::<wbr />ParsedURL</a></span>
             </dt>
             <dd>Split a URL into its components.</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a7559099aa6b6410584587863e20f0447" class="m-doc">parse_header_links</a>(</span><span class="m-doc-wrap">std::string value) -&gt; std::vector&lt;std::map&lt;std::string, std::string&gt;&gt;</span>
-            </dt>
-            <dd>Parse a header links string into a vector of maps.</dd>
           </dl>
         </section>
         <section>
@@ -141,12 +137,30 @@
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a96905c9cb3c32d831af3f3aaf2ae6e66"><div>
+          <section class="m-doc-details" id="a190e09ec535f615cfe6e2809ae119562"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">std::vector&lt;std::map&lt;std::string, std::string&gt;&gt; Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a96905c9cb3c32d831af3f3aaf2ae6e66" class="m-doc-self">parse_header_links</a>(</span><span class="m-doc-wrap">const std::string&amp; value)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8cpp.html">&lt;src/Utility.cpp&gt;</a></div>
+              <span class="m-doc-wrap-bumper">std::vector&lt;std::map&lt;std::string, std::string&gt;&gt; Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a190e09ec535f615cfe6e2809ae119562" class="m-doc-self">parse_header_links</a>(</span><span class="m-doc-wrap">const std::string&amp; value)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Parse a header links string into a vector of maps.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">value</td>
+                  <td>The header links string to parse.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A vector of maps, where each map represents a link.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function takes a string representing a header links value and parses it into a vector of maps, where each map represents a link.</p>
           </div></section>
           <section class="m-doc-details" id="aaa23cf0417fb76c49775803a5aabef83"><div>
             <h3>
@@ -272,31 +286,6 @@
               </tfoot>
             </table>
 <p>This function takes a URL string and splits it into its components, returning a ParsedURL object.</p>
-          </div></section>
-          <section class="m-doc-details" id="a7559099aa6b6410584587863e20f0447"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">std::vector&lt;std::map&lt;std::string, std::string&gt;&gt; Reqboost::<wbr />Utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7559099aa6b6410584587863e20f0447" class="m-doc-self">parse_header_links</a>(</span><span class="m-doc-wrap">std::string value)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Utility_8h.html">&lt;include/reqboost/Utility.h&gt;</a></div>
-            </h3>
-            <p>Parse a header links string into a vector of maps.</p>
-            <table class="m-table m-fullwidth m-flat">
-              <thead>
-                <tr><th colspan="2">Parameters</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="width: 1%">value</td>
-                  <td>The header links string to parse.</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Returns</th>
-                  <td>A vector of maps, where each map represents a link.</td>
-                </tr>
-              </tfoot>
-            </table>
-<p>This function takes a string representing a header links value and parses it into a vector of maps, where each map represents a link.</p>
           </div></section>
         </section>
       </div>
