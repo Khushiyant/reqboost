@@ -12,6 +12,69 @@
 
 namespace Reqboost {
     namespace Utility {
+        std::string detect_encoding(std::string _content_string, size_t _content_length)
+        {
+            const char *content = _content_string.c_str();
+            size_t length = _content_length;
+
+            // Check for UTF-8 BOM
+            if (length >= 3 && content[0] == 0xEF && content[1] == 0xBB && content[2] == 0xBF)
+            {
+                return "utf-8";
+            }
+
+            // Check for utf-16 BOM
+            if (length >= 2)
+            {
+                if (content[0] == 0xFE && content[1] == 0xFF)
+                {
+                    return "utf-16be";
+                }
+                if (content[0] == 0xFF && content[1] == 0xFE)
+                {
+                    return "utf-16le";
+                }
+            }
+
+            // Simple UTF-8 validity check
+            bool is_ascii = true;
+            size_t i = 0;
+            while (i < length)
+            {
+                if (content[i] <= 0x7F)
+                {
+                    i++;
+                }
+                else
+                {
+                    is_ascii = false;
+                    if ((content[i] & 0xE0) == 0xC0)
+                    {
+                        if (i + 1 >= length || (content[i + 1] & 0xC0) != 0x80)
+                            return "unknown";
+                        i += 2;
+                    }
+                    else if ((content[i] & 0xF0) == 0xE0)
+                    {
+                        if (i + 2 >= length || (content[i + 1] & 0xC0) != 0x80 || (content[i + 2] & 0xC0) != 0x80)
+                            return "unknown";
+                        i += 3;
+                    }
+                    else if ((content[i] & 0xF8) == 0xF0)
+                    {
+                        if (i + 3 >= length || (content[i + 1] & 0xC0) != 0x80 || (content[i + 2] & 0xC0) != 0x80 || (content[i + 3] & 0xC0) != 0x80)
+                            return "unknown";
+                        i += 4;
+                    }
+                    else
+                    {
+                        return "unknown";
+                    }
+                }
+            }
+
+            return is_ascii ? "ascii" : "utf-8";
+        }
 
         std::vector<std::map<std::string, std::string>> parse_header_links(const std::string &value)
         {

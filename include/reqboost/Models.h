@@ -46,8 +46,9 @@ namespace Reqboost
         class Response
         {
             public:
-                std::string _content;
                 int status_code;
+
+                std::string _content;
                 std::map<std::string, std::string> headers ;
                 std::string url;
                 std::vector<Response> history;
@@ -55,7 +56,9 @@ namespace Reqboost
                 std::string reason;
                 std::map<std::string, std::string> cookies;
 
-                std::string elapsed;
+                // Sets the elapsed time of the request
+                std::chrono::duration<double> elapsed;
+
                 std::string request;
 
                 // Methods
@@ -75,7 +78,10 @@ namespace Reqboost
                  */
                 bool is_permanent_redirect();
 
-
+                /**
+                 * @brief Raise an exception for status codes
+                 * 
+                 */
                 void raise_for_status();
                 /**
                  * @brief Content of the response in unicode
@@ -107,6 +113,7 @@ namespace Reqboost
 
                 // property methods
                 bool ok() ;
+                std::string apparent_encoding();
 
                 // Constructor
                 Response();

@@ -7,16 +7,25 @@
 
 namespace Reqboost {
     namespace Utility{
-       /**
-        * @brief Parse a header links string into a vector of maps.
-        *
-        * This function takes a string representing a header links value and
-        * parses it into a vector of maps, where each map represents a link.
-        *
-        * @param value The header links string to parse.
-        * @return A vector of maps, where each map represents a link.
-        */
-       std::vector<std::map<std::string, std::string>> parse_header_links(const std::string &value);
+
+        /**
+         * @brief Detect the encoding of a string.
+         *
+         * This function takes a string and detects its encoding.
+         *
+         * @return The detected encoding of the string.
+         */
+        std::string detect_encoding(std::string _content_string, size_t _content_length);
+        /**
+         * @brief Parse a header links string into a vector of maps.
+         *
+         * This function takes a string representing a header links value and
+         * parses it into a vector of maps, where each map represents a link.
+         *
+         * @param value The header links string to parse.
+         * @return A vector of maps, where each map represents a link.
+         */
+        std::vector<std::map<std::string, std::string>> parse_header_links(const std::string &value);
 
         /**
         * @brief Decode a UTF-8 encoded string.

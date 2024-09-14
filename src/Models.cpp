@@ -14,7 +14,7 @@ namespace Reqboost
     {
         // Default constructor for Response
         Response::Response()
-            : _content(""), status_code(0), headers(), url(""), history(), encoding(""), reason(""), cookies(), elapsed(""), request("") {}
+            : _content(""), status_code(0), headers(), url(""), history(), encoding(""), reason(""), cookies(), elapsed(std::chrono::duration<double>::zero()), request("") {}
 
 
         // Methods
@@ -150,7 +150,11 @@ namespace Reqboost
             }
 
             return true;
+        }
 
+        std::string Response::apparent_encoding()
+        {
+            return Utility::detect_encoding(this->_content,  this->_content.length());
         }
 
     } // namespace Models
