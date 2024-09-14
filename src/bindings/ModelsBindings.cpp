@@ -22,7 +22,11 @@ void bind_models(py::module_ &m)
 
         // Dunder methods
         .def("__repr__", &Reqboost::Models::Response::__repr__)
+        .def("__nonzero__", &Reqboost::Models::Response::__nonzero__)
+        .def("__bool__", &Reqboost::Models::Response::__bool__)
+        // .def("__enter__", &Reqboost::Models::Response::__enter__)
         
+        // Property methods
         .def_property_readonly("text", &Reqboost::Models::Response::text)
         .def_property_readonly("links", &Reqboost::Models::Response::links)
 
