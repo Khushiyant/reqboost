@@ -10,11 +10,9 @@
 #ifndef API_H
 #define API_H
 
-#include <string>
-#include <curl/curl.h>
+
 #include <pybind11/pybind11.h>
 #include "Models.h"
-#include "Sessions.h"
 
 namespace py = pybind11;
 namespace Reqboost

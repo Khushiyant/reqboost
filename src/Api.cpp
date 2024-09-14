@@ -1,3 +1,7 @@
+#include <string>
+#include <curl/curl.h>
+#include "Sessions.h"
+
 #include "Api.h"
 
 

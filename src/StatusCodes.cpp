@@ -1,3 +1,8 @@
+#include <string>
+#include <map>
+#include <vector>
+#include <iostream>
+
 #include "StatusCodes.h"
 namespace Reqboost
 {

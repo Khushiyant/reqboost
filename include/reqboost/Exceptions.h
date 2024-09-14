@@ -1,9 +1,6 @@
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
 
-#include <stdexcept>
-#include <exception>
-#include <string>
 namespace Reqboost{
 
     namespace Exceptions{

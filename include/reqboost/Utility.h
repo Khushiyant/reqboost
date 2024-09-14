@@ -1,16 +1,8 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
-#include <string>
-#include <curl/curl.h>
-#include <Poco/URI.h>
-#include <string>
-#include <vector>
-#include <memory>
 #include <fstream>
-#include <iostream>
-#include <codecvt>
-#include <regex>
+
 #include "Models.h"
 
 namespace Reqboost {
@@ -24,9 +16,9 @@ namespace Reqboost {
         * @param value The header links string to parse.
         * @return A vector of maps, where each map represents a link.
         */
-       std::vector<std::map<std::string, std::string>> parse_header_links(std::string value);
-       
-       /**
+       std::vector<std::map<std::string, std::string>> parse_header_links(const std::string &value);
+
+        /**
         * @brief Decode a UTF-8 encoded string.
         *
         * This function takes a UTF-8 encoded string and decodes it into a
@@ -35,8 +27,8 @@ namespace Reqboost {
         * @param encoded The UTF-8 encoded string to decode.
         * @return The decoded string.
         */
-       std::string decode_utf8(const std::string &encoded);
-       
+        std::string decode_utf8(const std::string &encoded);
+
        /**
         * @brief URL encode a string.
         *

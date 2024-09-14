@@ -1,12 +1,6 @@
 #ifndef MODELS_H
 #define MODELS_H
 
-#include <iostream>
-#include <map>
-#include <string>
-#include <any>
-#include <vector>
-#include <utility>
 #include <unordered_set>
 
 #include "Exceptions.h"
@@ -92,8 +86,8 @@ namespace Reqboost
 
                 std::map<std::string, std::map<std::string, std::string>> links();
 
-                    // Dunder methods
-                    std::string __repr__();
+                // Dunder methods
+                std::string __repr__();
 
                 /**
                  * @brief Returns True if :attr:`status_code` is less than 400

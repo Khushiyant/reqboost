@@ -1,5 +1,8 @@
-#include "Exceptions.h"
+#include <stdexcept>
+#include <exception>
+#include <string>
 
+#include "Exceptions.h"
 namespace Reqboost{
     namespace Exceptions{
         // Base class implementation

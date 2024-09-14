@@ -1,3 +1,13 @@
+#include <curl/curl.h>
+#include <Poco/URI.h>
+#include <string>
+#include <vector>
+#include <memory>
+#include <iostream>
+#include <codecvt>
+#include <regex>
+#include <map>
+
 #include "Utility.h"
 
 namespace Reqboost {
