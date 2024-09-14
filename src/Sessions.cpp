@@ -1,5 +1,4 @@
 #include <string>
-#include <curl/curl.h>
 
 #include "Sessions.h"
 
