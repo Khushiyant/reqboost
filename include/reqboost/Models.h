@@ -80,7 +80,7 @@ namespace Reqboost
 
                 /**
                  * @brief Raise an exception for status codes
-                 * 
+                 *
                  */
                 void raise_for_status();
                 /**

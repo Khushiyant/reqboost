@@ -4,9 +4,12 @@
 #include <fstream>
 
 #include "Models.h"
+#include "Certs.h"
 
 namespace Reqboost {
     namespace Utility{
+
+        const std::string DEFAULT_CA_BUNDLE_PATH = Certs::get_default_ca_bundle_path();
 
         /**
          * @brief Detect the encoding of a string.
@@ -48,7 +51,7 @@ namespace Reqboost {
         * @return The URL encoded string.
         */
        std::string urlencode(const std::string &decoded);
-       
+
        /**
         * @brief URL decode a string.
         *
@@ -59,7 +62,7 @@ namespace Reqboost {
         * @return The decoded string.
         */
        std::string urldecode(const std::string &encoded);
-       
+
        /**
         * @brief Unparse a ParsedURL object into a URL string.
         *
@@ -70,7 +73,7 @@ namespace Reqboost {
         * @return The URL string.
         */
        std::string urlunparse(const Models::ParsedURL &parsed);
-       
+
        /**
         * @brief Split a URL into its components.
         *
