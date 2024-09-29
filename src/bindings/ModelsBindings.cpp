@@ -48,11 +48,11 @@ void bind_models(py::module_ &m)
         .def_readwrite("data", &Reqboost::Models::RequestOptions::data);
 
     py::class_<Reqboost::Models::Request>(m, "Request")
-        .def(py::init<const std::string&, const std::string&, 
-                      const std::map<std::string, std::string>&, 
-                      const std::vector<std::pair<std::string, std::string>>&, 
-                      const std::vector<std::pair<std::string, std::string>>&, 
-                      const std::map<std::string, std::string>&, 
+        .def(py::init<const std::string&, const std::string&,
+                      const std::map<std::string, std::string>&,
+                      const std::vector<std::pair<std::string, std::string>>&,
+                      const std::vector<std::pair<std::string, std::string>>&,
+                      const std::map<std::string, std::string>&,
                       const std::map<std::string, std::function<void()>>&>(),
              py::arg("method") = "", py::arg("url") = "", py::arg("headers") = std::map<std::string, std::string>(),
              py::arg("files") = std::vector<std::pair<std::string, std::string>>(),
