@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Reqboost::Models namespace | Reqboost</title>
+  <title>Reqboost::Models::RequestHooksMixin class | Reqboost</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon-dark.png" type="image/png" />
@@ -44,7 +44,8 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <span class="m-breadcrumb"><a href="namespaceReqboost.html">Reqboost</a>::<wbr/></span>Models <span class="m-thin">namespace</span>
+          <span class="m-breadcrumb"><a href="namespaceReqboost.html">Reqboost</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespaceReqboost_1_1Models.html">Models</a>::<wbr/></span>RequestHooksMixin <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Models_8h.html">&lt;include/reqboost/Models.h&gt;</a></div>
         </h1>
         <p><span></span></p>
         <nav class="m-block m-default">
@@ -53,67 +54,39 @@
             <li>
               Reference
               <ul>
-                <li><a href="#nested-classes">Classes</a></li>
-                <li><a href="#var-members">Variables</a></li>
+                <li><a href="#derived-classes">Derived classes</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
               </ul>
             </li>
           </ul>
         </nav>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
+        <section id="derived-classes">
+          <h2><a href="#derived-classes">Derived classes</a></h2>
           <dl class="m-doc">
             <dt>
-              struct <a href="structReqboost_1_1Models_1_1ParsedURL.html" class="m-doc">ParsedURL</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              struct <a href="structReqboost_1_1Models_1_1RequestOptions.html" class="m-doc">RequestOptions</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              class <a href="classReqboost_1_1Models_1_1Response.html" class="m-doc">Response</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              class <a href="classReqboost_1_1Models_1_1RequestEncodingMixin.html" class="m-doc">RequestEncodingMixin</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              class <a href="classReqboost_1_1Models_1_1RequestHooksMixin.html" class="m-doc">RequestHooksMixin</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              class <a href="classReqboost_1_1Models_1_1MultipartEncoder.html" class="m-doc">MultipartEncoder</a>
+              class <a href="classReqboost_1_1Models_1_1PreparedRequest.html" class="m-doc">PreparedRequest</a>
             </dt>
             <dd><span></span></dd>
             <dt>
               class <a href="classReqboost_1_1Models_1_1Request.html" class="m-doc">Request</a>
             </dt>
             <dd><span></span></dd>
-            <dt>
-              class <a href="classReqboost_1_1Models_1_1PreparedRequest.html" class="m-doc">PreparedRequest</a>
-            </dt>
-            <dd><span></span></dd>
           </dl>
         </section>
-        <section id="var-members">
-          <h2><a href="#var-members">Variables</a></h2>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt>
-              const std::unordered_set&lt;int&gt; <a href="#aa5c74b20fbc9ea2bb03ff0811ce7b682" class="m-doc">REDIRECT_STATI</a>
+            <dt id="a71c562541f76de36c238f3e3a6d3c0f0">
+              <span class="m-doc-wrap-bumper">void <a href="#a71c562541f76de36c238f3e3a6d3c0f0" class="m-doc-self">register_hook</a>(</span><span class="m-doc-wrap">const std::string&amp; event,
+              const std::function&lt;void()&gt;&amp; hook)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9dc26984a37787a62513dfed0c909c02">
+              <span class="m-doc-wrap-bumper">auto <a href="#a9dc26984a37787a62513dfed0c909c02" class="m-doc-self">deregister_hook</a>(</span><span class="m-doc-wrap">const std::string&amp; event,
+              const std::function&lt;void()&gt;&amp; hook) -&gt; bool</span>
             </dt>
             <dd><span></span></dd>
           </dl>
-        </section>
-        <section>
-          <h2>Variable documentation</h2>
-          <section class="m-doc-details" id="aa5c74b20fbc9ea2bb03ff0811ce7b682"><div>
-            <h3>
-              const std::unordered_set&lt;int&gt; Reqboost::<wbr />Models::<wbr /><a href="#aa5c74b20fbc9ea2bb03ff0811ce7b682" class="m-doc-self">REDIRECT_STATI</a>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Models_8h.html">&lt;include/reqboost/Models.h&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
         </section>
       </div>
     </div>
